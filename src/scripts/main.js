@@ -425,12 +425,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 myMap.geoObjects.add(myPlacemark);
             }
 
-            // for (const point of msk) {
-            //     myPlacemark = new ymaps.Placemark(point.coordinates, {
-            //         balloonContentHeader: point.balloonContentHeader,
-            //     });
-            //     myMap.geoObjects.add(myPlacemark);
-            // }
 
         }
     };
