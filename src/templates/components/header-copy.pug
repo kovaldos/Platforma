@@ -1,0 +1,38 @@
+.wrapper
+    header.header.center
+        .header__logo-box
+            a(href="index.html").header__logo-link
+                svg.header__logo(width="200" height="50")  
+                    use(xlink:href="./assets/images/sprite.svg#logo_horizont1" alt="logo-img")
+        .header__menu.menu
+            .menu__icon 
+                span  
+            nav.menu__body
+                .menu__location.visible 
+                    .menu__select
+                        .menu__select-current Санкт‑Петербург
+                        .menu__select-icon    
+                    .menu__select-body
+                        .menu__select-item Санкт‑Петербург 
+                        .menu__select-item Другой город
+                        .menu__select-item Другой город 2
+                        .menu__select-item Другой город 3
+                ul.menu__list
+                    li
+                        a(href="concept.html").menu__link Концепция
+                    li
+                        a(href="catalog.html").menu__link Серии
+                    li
+                        a(href="projects.html").menu__link Проекты
+                    li
+                        a(href="blog.html").menu__link Блог
+                    li
+                        a(href="contacts.html").menu__link О компании
+                .menu__contacts
+                    a(href="tel:+78002343763").menu__number 8 (800) 234-37-63
+                    a(href="#popup").menu__appeal.popup-link Обратиться к нам
+                .menu__block
+                    a.menu__text(href="#") Политика конфеденциальности предоставляемых данных 
+                    a.menu__text(href="#") Пользовательское соглашение 
+                    a(href="https://ra-studio.ru/").menu__text Сайт сделал: RA-Studio     
+
