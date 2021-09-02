@@ -1,0 +1,53 @@
+extends ../template copy
+
+block variables
+    - var title = 'Проекты'
+    - var contactForm = true
+
+block content
+    main
+        .wrapper 
+            nav.breadcrump.center
+                ul.breadcrump__menu
+                    li 
+                        a.breadcrump__menu-link(href="index.html") Главная 
+                    li  
+                        a.breadcrump__menu-link.breadcrump__menu-link-active(href="projects.html") Проекты
+            section.projects.center
+                h1.section__title Проекты
+                .projects__content 
+                    h2.article__heading Cabin
+                    .projects__carried-box
+                        .projects__carried 
+                            a(href="case-carried.html").projects__carried-link
+                                img(src="assets/images/cabin-carried-img1.png", alt="project-image")
+                                p Кейс выполненый
+                        .item-clear        
+                        .projects__carried  
+                            a(href="case-carried.html").projects__carried-link
+                                img(src="assets/images/cabin-carried-img2.png", alt="project-image")
+                                p Кейс выполненый
+                .projects__content
+                    h2.article__heading Зиг Заг
+                    .projects__carried-box
+                        .projects__carried 
+                            a(href="case-carried.html").projects__carried-link
+                                img(src="assets/images/zigzag-carried-img1.png", alt="project-image")
+                                p Кейс выполненый
+                        .item-clear        
+                        .projects__carried
+                            a(href="case-carried.html").projects__carried-link
+                                img(src="assets/images/zigzag-carried-img2.png", alt="project-image")
+                                p Кейс выполненый
+                .projects__content.projects__content-bottom
+                    h2.article__heading Патио
+                    .projects__carried-box.projects__carried-box-bottom
+                        .projects__carried 
+                            a(href="case-carried.html").projects__carried-link
+                                img(src="assets/images/patio-carried-img1.png", alt="project-image")
+                                p Кейс выполненый
+                        .item-clear        
+                        .projects__carried  
+                            a(href="case-carried.html").projects__carried-link
+                                img(src="assets/images/patio-carried-img2.png", alt="project-image")
+                                p Кейс выполненый                      

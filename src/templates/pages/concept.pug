@@ -1,0 +1,120 @@
+extends ../template copy
+
+block variables
+    - var title = 'Концепция'
+    - var contactForm = true
+
+block content
+    main
+        .wrapper
+            nav.breadcrump.center
+                ul.breadcrump__menu
+                    li 
+                        a.breadcrump__menu-link(href="index.html") Главная 
+                    li  
+                        a.breadcrump__menu-link.breadcrump__menu-link-active(href="concept.html") Концепция
+            section.concept.center
+                .concept__content
+                    h1.section__title Концепция
+                    .article-box  
+                        article 
+                            p.concept__text.section__text В основу планировочных решений домов модульной серии лег анализ десятков лучших мировых примеров частных домов. На базе этого анализа, нами были спроектированы дома различной конфигурации, площади, набора помещений и отношений с окружением.
+                            p.concept__text.section__text Все планировки компонуются из базовых блок-образно, формирующие полузамкнутые внутренние модулей, каждый из которых отвечает за ту или иную функцию, входящую в планировку дома.
+                        .item-clear       
+                        article
+                            p.concept__text.section__text Кухни, гостиные, спальни и кабинеты, вспомогательные помещения типа кладовок и гардеробных, санузлы различного габарита, прихожие. Все эти базовые элементы частного жилого пространства формируются в дома различной площади и конфигурации.
+                            p.concept__text.section__text Линейка разработанных нами модульных домов включает различные решения по площадям, от 76 до 120 кв.м. 
+            section.concept-slider.center
+               .concept__box.slider-vert-box
+                    .swiper-container.swiper6.swiper-vertical
+                        .swiper-pagination.swiper-pagination-left
+                        .swiper-wrapper
+                            .swiper-slide.mobile
+                                img(src="assets/images/concept-slider-img.png" alt="slider-image")
+                            .swiper-slide.mobile
+                                img(src="assets/images/concept-for-mobile-img2.jpg" alt="slider-image")
+                            .swiper-slide.mobile
+                                img(src="assets/images/concept-for-mobile-img3.jpg" alt="slider-image")
+                            //- .swiper-slide.mobile
+                            //-     img(src="assets/images/concept-slider-img.png" alt="slider-image")
+                            //- .swiper-slide.mobile
+                            //-     img(src="assets/images/concept-slider-img.png" alt="slider-image")
+                    .swiper-container.swiper6-text
+                        .swiper-wrapper
+                            .swiper-slide.mobile
+                                .concept__text-block.slider-vert-box__text-block
+                                    h2.concept__heading.slider-vert-box__heading Дом ТИРЕ
+                                    p.concept__text.slider-vert-box__text Дом ТИРЕ - компактный дом с 2 спальнями. Подходит для участков небольшой прощади и простой геометрии.
+                                    p.concept__text.slider-vert-box__text Площадь дома меняется за счет увеличения/уменьшения пространства кухни-гостиной.
+                                    p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                                    p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                            .swiper-slide.mobile
+                                .concept__text-block.slider-vert-box__text-block
+                                    h2.concept__heading.slider-vert-box__heading Дом БЛОК
+                                    p.concept__text.slider-vert-box__text Дом БЛОК - компактный дом с 2 спальнями.
+                                    p.concept__text.slider-vert-box__text Подходит для компактных участков простой геометрии.
+                                    p.concept__text.slider-vert-box__text Площадь дома увеличивается/уменьшается за счет изменения размеров кухни-гостиной.Все помещения имеют угловое остекление.
+                                    //- p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                                    //- p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                            .swiper-slide.mobile
+                                .concept__text-block.slider-vert-box__text-block
+                                    h2.concept__heading.slider-vert-box__heading Дом ЛИНИЯ
+                                    p.concept__text.slider-vert-box__text Дом ЛИНИЯ - компактный дом с 2 спальнями.
+                                    p.concept__text.slider-vert-box__text Подходит для компактных участков простой геометрии.
+                                    p.concept__text.slider-vert-box__text Площадь дома увеличивается/ уменьшается за счет изменения размеров кухни-гостиной.Все помещения имеют угловое остекление.
+                                    //- p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                            //- .swiper-slide.mobile
+                            //-     .concept__text-block.slider-vert-box__text-block
+                            //-         h2.concept__heading.slider-vert-box__heading Дом ТИРЕ
+                            //-         p.concept__text.slider-vert-box__text Дом ТИРЕ - компактный дом с 2 спальнями. Подходит для участков небольшой прощади и простой геометрии.
+                            //-         p.concept__text.slider-vert-box__text Площадь дома меняется за счет увеличения/уменьшения пространства кухни-гостиной.
+                            //-         p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                            //-         p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                            //- .swiper-slide.mobile
+                            //-     .concept__text-block.slider-vert-box__text-block
+                            //-         h2.concept__heading.slider-vert-box__heading Дом ТИРЕ
+                            //-         p.concept__text.slider-vert-box__text Дом ТИРЕ - компактный дом с 2 спальнями. Подходит для участков небольшой прощади и простой геометрии.
+                            //-         p.concept__text.slider-vert-box__text Площадь дома меняется за счет увеличения/уменьшения пространства кухни-гостиной.
+                            //-         p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                            //-         p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                    .for-mobile
+                        p.for-mobile__heading 01
+                        img(src="assets/images/concept-slider-img.png" alt="slider-image")
+                        .concept__text-block.slider-vert-box__text-block
+                            h2.concept__heading.slider-vert-box__heading Дом ТИРЕ
+                            p.concept__text.slider-vert-box__text Дом ТИРЕ - компактный дом с 2 спальнями. Подходит для участков небольшой прощади и простой геометрии.
+                            p.concept__text.slider-vert-box__text Площадь дома меняется за счет увеличения/уменьшения пространства кухни-гостиной.
+                            p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                            p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                        p.for-mobile__heading 02
+                        img(src="assets/images/concept-for-mobile-img2.jpg" alt="slider-image")
+                        .concept__text-block.slider-vert-box__text-block
+                            h2.concept__heading.slider-vert-box__heading Дом БЛОК
+                            p.concept__text.slider-vert-box__text Дом БЛОК - компактный дом с 2 спальнями. Подходит для компактных участков простой геометрии.
+                            p.concept__text.slider-vert-box__text Площадь дома увеличивается/уменьшается за счет изменения размеров кухни-гостиной.Все помещения имеют угловое остекление.
+                            //- p.concept__text.slider-vert-box__text Площадь дома меняется за счет увеличения/уменьшения пространства кухни-гостиной.
+                            //- p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                            //- p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.
+                        p.for-mobile__heading 03
+                        img(src="assets/images/concept-for-mobile-img3.jpg" alt="slider-image")
+                        .concept__text-block.slider-vert-box__text-block
+                            h2.concept__heading.slider-vert-box__heading Дом ЛИНИЯ
+                            p.concept__text.slider-vert-box__text Дом ЛИНИЯ - компактный дом с 2 спальнями.
+                            p.concept__text.slider-vert-box__text Подходит для компактных участков простой геометрии.
+                            p.concept__text.slider-vert-box__text Площадь дома увеличивается/ уменьшается за счет изменения размеров кухни-гостиной.Все помещения имеют угловое остекление.
+                            //- p.concept__text.slider-vert-box__text Площадь дома меняется за счет увеличения/уменьшения пространства кухни-гостиной.
+                            //- p.concept__text.slider-vert-box__text Окна жилых помещений ориентированы в одну сторону.
+                            //- p.concept__text.slider-vert-box__text Благодаря этому все комнаты имеют одинаковые видовые характеристики.                                                        
+
+            section.aesthetics.center
+                article.aesthetics-article.article 
+                    h2.article__heading Эстетика решений
+                    .article-text-block
+                        p.section__text.aesthetics__text С точки зрения пространственных решений и работы с фасадами, все дома серии объединяет желание создания легких и открытых внутренних пространств. Это стремление реализуется через применение, где уместно, остекления в пол, витражного остекления зоны гостиной. В то же время, понимая не всегда идеальный контекст размещения, близость соседей или просто нежелательных видовых раскрытий, мы работаем с построением верного соотношения между глухими и закрытыми от окружения плоскостями фасадов с одной стороны, и открытыми на участок или окружение остекленными частями фасадов.
+                        p.section__text.aesthetics__text Общая эстетика решений поверхностей фасадов и внутренних помещений подчеркнута спокойна, тяготеет к использованию естественных и нейтральных по цветам материалов в отделке. Мы создаем комфортную среду для жизни, в которой главными становятся внутреннее наполнение дома и взаимодействие с внешним природным окружением
+            section.appeal.center
+                .appeal__block
+                    img.appeal__img(src="assets/images/appeal-img.png")
+                .appeal__block.appeal__block-right
+                    h3.appeal__heading.section__title Хотели бы узнать больше?
+                    a.appeal__link.popup-link(href="#popup") Обратиться к нам

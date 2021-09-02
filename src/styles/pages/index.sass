@@ -1,0 +1,3763 @@
+@mixin flex_space_between_items_center
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+$brandColor: #00A2CE
+$headerHeight: 90px
+
+body
+  max-width: 1920px
+  position: relative
+  margin: 0 auto
+  overflow-x: hidden
+
+body._locked,
+body._lock
+  overflow: hidden
+
+.wrapper
+  position: relative
+  min-width: 320px
+  max-width: 1920px
+  margin: 0 auto
+
+.center
+  padding: 0 calc(50% - 800px)
+
+.header-home-page
+  &__logo-box
+    padding-top: 20px
+
+.header-home-page, .header
+  background: #F7F7F7
+  @include flex_space_between_items_center
+  min-height: 90px
+
+.header-home-page
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 5
+  background: none
+  padding: 0 calc(50% - 800px)
+
+  &__menu
+    width: 67.5%
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 5
+  &__menu
+    width: 100%
+  &__logo-box
+    margin-right: 30px
+
+.menu
+  &__body
+    @include flex_space_between_items_center
+
+  // style for select
+  &__location
+    display: none
+    position: relative
+  .visible
+    display: block
+    position: relative
+    cursor: pointer
+  &__location._active .menu__select-body
+    display: block
+  // &__location-visible._active .menu__select-body
+  //   display: block  
+  &__select
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 160px
+  &__select-current
+    font-weight: 600
+    font-size: 14px
+    line-height: 24px
+    color: #2D2D2D
+    padding: 5px
+  &__select-icon
+    &::before,
+    &::after
+      content: ""
+      display: block
+      width: 1px
+      height: 8px
+      position: absolute
+      left: 92%
+      top: calc(50% - 4px)
+      transform: rotate(-45deg)
+      background: #000
+    &::after
+      transform: rotate(45deg)
+      left: 96%
+  &__location._active
+    .menu__select-icon::before
+      transform: rotate(45deg)
+    .menu__select-icon::after
+      transform: rotate(-45deg)
+  &__select-body
+    display: none
+    width: 160px
+    position: absolute
+    left: 0
+    top: 100%
+    border: 1px solid lightgrey
+    border-top: none
+    background: #F7F7F7
+    border-radius: 1%
+    padding: 5px
+  &__select-item
+    font-weight: 600
+    font-size: 14px
+    line-height: 24px
+    color: #2D2D2D
+  &__select-item:hover
+    background: #949494
+
+  // &__location[open]>
+  //   .location__sub-list
+  //     width: max-content
+  //     position: absolute
+  //     top: 60px
+  //     left: 0
+  //     background-color: #fff
+  //     z-index: 5
+  //     padding: 20px
+  //     &::before
+  //       content: ""
+  //       display: block
+  //       width: 0
+  //       height: 0
+  //       border-left: 9px solid transparent
+  //       border-right: 9px solid transparent
+  //       border-bottom: 10px solid #FFF
+  //       position: absolute
+  //       top: -10px
+  //       left: 73%
+
+   // .location__sub-list>
+    //   li
+    //     padding: 10px
+
+  &__list
+    @include flex_space_between_items_center
+
+  &__link
+    padding: 20px
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: #2D2D2D
+  &__link:hover
+    text-decoration: underline
+  &__contacts
+    @include flex_space_between_items_center
+
+  &__number
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    color: #2D2D2D
+    padding: 10px
+  &__appeal
+    padding: 10px
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    text-transform: uppercase
+    color: $brandColor
+  &__number:hover,
+  &__appeal:hover
+    transform: scale(105%)
+  &__icon
+    display: none
+
+  &__block
+    display: none
+
+.main-title
+  z-index: 2
+  position: absolute
+  top: 20.7%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+
+.title
+  padding: 32px
+  font-weight: 600
+  font-size: 28px
+  line-height: 34px
+  max-width: 50%
+  text-align: center
+
+.swiper-button-prev::after, .swiper-button-next::after
+  display: none
+
+.swiper-container
+  z-index: 0
+
+.swiper1
+  .slide-img-mobile
+    display: none
+
+.swiper1
+  .swiper1-button-next,
+  .swiper1-button-prev
+    width: 40px
+    height: 40px
+    right: calc(45% - 20px)
+    top: calc(98% - 20px)
+
+  .swiper1-button-prev
+    left: calc(45% - 20px)
+
+  .swiper1-pagination
+    bottom: calc(4% - 5px)!important
+
+  .swiper-pagination-bullet
+    background: #FFFFFF
+    opacity: 1
+    width: 6px
+    height: 6px
+    margin: 0 8.5px!important
+
+  .swiper-pagination-bullet-active
+    background: $brandColor
+
+.section
+  &__title
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+
+  // &__title:hover
+  //   color: $brandColor
+
+  &__text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+
+  &__link
+    font-size: 14px
+    line-height: 17px
+    text-transform: uppercase
+    color: $brandColor
+    font-weight: 600
+
+.our-series
+  width: 100%
+  margin-top: 166px
+  position: relative
+
+  &__heading
+    width: max-content
+    position: absolute
+    height: 223px
+    z-index: 3
+    top: 0
+
+  &__text
+    padding: 30px 0 40px 0
+    max-width: 511px
+
+  &__slider
+    // min-height: 736px
+    padding-top: 150px
+    position: relative
+
+  .swiper2
+    .swiper-wrapper-custom
+      min-height: 665px
+      .swiper-slide
+        transition: all 0.3s ease
+        transform: translate(0px, 75%)
+
+      .swiper-slide-next
+        transform: translate(0px, 0%)
+        filter: brightness(100%)
+
+      .swiper-slide-next:hover,
+      .swiper-slide-prev:hover
+        filter: brightness(50%)
+      .swiper-slide-next:hover
+        cursor: url(../images/svg/slider-button-next_big.svg), pointer
+      .swiper-slide-prev:hover
+        cursor: url(../images/svg/slider-button-prev_big.svg), pointer
+      .swiper-slide-next+.swiper-slide
+        transform: translate(0px, -25%)
+
+      .swiper-slide-active
+        transform: translate(0px, 25%)
+
+      .swiper-slide-prev
+        transform: translate(0px, 50%)
+
+      .swiper-slide-title
+        font-weight: bold
+        font-size: 20px
+        line-height: 24px
+        text-align: right
+        color: #2D2D2D
+        padding-bottom: 16px
+        text-transform: uppercase
+
+    .swiper-pagination-bottom
+      max-width: 28%
+      height: 2px
+      left: 36%
+      top: 91%
+
+  &__videobox
+    margin-top: 199px
+    position: relative
+
+    .play-btn
+      display: block
+      position: absolute
+      left: calc(50% - 50px)
+      top: calc(50% - 50px)
+      cursor: pointer
+      z-index: 1
+      opacity: 1
+      visibility: visible
+      transition-delay: 0s
+
+    .hidden
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s, visibility 0s linear 0.3s
+
+    video
+      width: 100%
+
+.swiper2-fraction-box
+  display: flex
+  justify-content: center
+  align-items: center
+  .swiper2-fraction
+    width: 33%
+    display: flex
+    justify-content: space-between
+    position: absolute
+    bottom: 7%
+    .swiper2-current,
+    .swiper2-total
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      color: #2D2D2D
+    .swiper2-current
+      &::before
+        content: "0"
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        color: #2D2D2D
+    .swiper2-total
+      &::before
+        content: "0"
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        color: #2D2D2D
+
+.slider-vert-box
+  @include flex_space_between_items_center
+  .swiper-vertical
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    .swiper-pagination-left
+      position: static
+      width: 120px
+      transform: initial
+      right: 0
+      top: 0
+      text-align: initial
+      .swiper-pagination-bullet
+        margin: 30px 0
+        background: none
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #9F9F9F
+        width: 18px
+        height: 17px
+        border-radius: 0
+        opacity: 1
+      .swiper-pagination-bullet:before
+        content: "0"
+      .swiper-pagination-bullet-active:last-of-type
+        &::after
+          display: none
+      .swiper-pagination-bullet-active
+        color: $brandColor
+        margin: 30px 30px 92px 0
+        transition: all 0.3s ease 0s
+        &::after
+          content: ""
+          display: block
+          width: 1px
+          height: 61px
+          background: $brandColor
+          margin-left: 9px
+          pointer-events: none
+          margin: 15px 9px
+  &__text-block
+    width: 50%
+    padding: 70px 61px 0 180px
+    align-self: flex-start
+  &__heading
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+  &__text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+    padding-top: 40px
+
+.for-mobile
+  display: none
+  &__heading
+    padding: 60px 0 10px 0
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    color: $brandColor
+    display: none
+
+.individual-design
+  margin-top: 190px
+  .swiper3,
+  .swiper3-text
+    height: 512px
+    width: 100%
+  &__text-block
+    width: 100%
+  .swiper3-text
+    .swiper-slide
+      padding: 50px 0 0 100px
+
+  &__text-box
+    @include flex_space_between_items_center
+    min-height: 230px
+    margin-top: 253px
+    justify-content: center
+
+    svg
+      display: block
+      margin-right: 23px
+      align-self: flex-start
+
+    .text-block
+      font-weight: bold
+      font-size: 36px
+      line-height: 44px
+      color: #2D2D2D
+      max-width: 930px
+
+.our-production
+  background: #F6F6F6
+  margin-top: 74px
+
+  &__top
+    @include flex_space_between_items_center
+    min-height: 250px
+
+  &__heading
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+    width: 50%
+
+  &__text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+    width: 50%
+    padding-top: 35px
+
+  &__bottom
+    min-height: 750px
+    background: url(../images/our_production_back.jpg) top center no-repeat
+    display: flex
+    flex-direction: column-reverse
+    padding-bottom: 50px
+
+  &__item-box
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    width: 50%
+
+  &__item
+    width: 50%
+    .item-parag
+      font-weight: bold
+      font-size: 96px
+      line-height: 117px
+      color: #2D2D2D
+
+    span
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      color: #2D2D2D
+      margin-left: 20px
+
+    p
+      font-size: 16px
+      line-height: 20px
+      color: #2D2D2D
+
+  &__text-block
+    @include flex_space_between_items_center
+    padding: 0 22px
+
+.exclusive-design
+  @include flex_space_between_items_center
+  margin-top: 170px
+  align-items: flex-start
+  min-height: 531px
+
+  &__left
+    width: 50%
+    padding-right: 10px
+
+  &__heading
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+
+  &__text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+    margin-top: 40px
+
+  .awards-block
+    margin-top: 50px
+    .awards-content
+      width: 100%
+      padding-right: 30px
+      min-height: 272px
+      display: flex
+      justify-content: flex-start
+      flex-wrap: wrap
+      .item
+        max-width: 380px
+        padding: 0 20px 0 0
+        svg
+          display: block
+        p
+          font-size: 14px
+          line-height: 150%
+          color: #818181
+          margin-top: 15px
+        .bottom-left
+          padding-bottom: 18px
+        .about-rhizome-link
+          @include flex_space_between_items_center
+          font-weight: bold
+          font-size: 10px
+          line-height: 12px
+          text-align: center
+          text-transform: uppercase
+          background: #2D2D2D
+          border-radius: 50%
+          width: 120px
+          height: 120px
+          color: #FFFFFF
+          padding: 20px
+    .about-rhizome-link.mobile
+      justify-content: space-between
+      align-items: center
+      font-weight: bold
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      text-transform: uppercase
+      background: #2D2D2D
+      border-radius: 50%
+      width: 120px
+      height: 120px
+      color: #FFFFFF
+      padding: 20px
+      margin: 0 auto
+      display: none
+  &__right
+    max-width: 790px
+
+    // .swiper-button-next::after,
+    // .swiper-button-prev::after
+    //   display: none
+
+    .swiper4-button-next,
+    .swiper4-button-prev
+      width: 50px
+      height: 50px
+      top: 50%
+
+.cost
+  background: #2D2D2D
+  min-height: 750px
+  margin-top: 245px
+  padding-top: 130px
+
+  &__title
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #FFFFFF
+
+  &__form
+    padding-right: 370px
+
+  &__input-box
+    display: flex
+    justify-content: space-between
+    margin-top: 70px
+
+    input
+      width: 50%
+      background-color: inherit
+      border-bottom: 2px solid #C4C4C4
+      color: #F4F4F4
+      font-size: 16px
+      line-height: 160%
+
+    .clear
+      width: 30px
+
+  &__message-box
+    margin-top: 60px
+
+    input
+      width: 100%
+      background-color: inherit
+      border-bottom: 2px solid #C4C4C4
+      color: #F4F4F4
+      font-size: 16px
+      line-height: 160%
+
+  input::placeholder
+    font-size: 14px
+    line-height: 160%
+    color: #F4F4F4
+
+  .attachment
+    margin-top: 42px
+    display: flex
+    justify-content: flex-start
+
+    svg
+      display: block
+      margin-right: 10px
+
+    p
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #FFFFFF
+
+  .agreement
+    display: flex
+    align-items: center
+    min-height: 120px
+    margin-top: 70px
+
+    p
+      max-width: 520px
+      font-size: 14px
+      line-height: 150%
+      color: #C4C4C4
+
+    a
+      font-weight: bold
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      text-transform: uppercase
+      color: #2D2D2D
+      width: 120px
+      height: 120px
+      background: #FFFFFF
+      margin-left: 50px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+
+.banks
+  @include flex_space_between_items_center
+  background: #f7f7f7
+  padding-top: 70px
+  padding-bottom: 90px
+  min-height: 370px
+
+  &__text-block
+    width: 50%
+
+  &__heading
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #2D2D2D
+
+  &__text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+    max-width: 615px
+    padding-top: 40px
+
+  &__logo
+    padding-left: 20px
+    width: 50%
+    @include flex_space_between_items_center
+
+  .vtb-logo
+    margin: 0 197px 3px 0
+
+.manufacture
+  @include flex_space_between_items_center
+  padding-top: 180px
+  &__text-block
+    width: 100%
+  .swiper5
+    height: 500px
+
+.faq
+  padding-top: 195px
+
+  &__heading
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+    text-transform: uppercase
+
+  &__accordion-block
+    margin-top: 86px
+    border-top: 1px solid #6C6C6C
+    padding-bottom: 190px
+
+    .accordion-container
+      .ac
+        border: none
+
+      .ac-custom
+        min-height: 69px
+        background: inherit
+        margin-top: 0
+        border-bottom: 1px solid #6C6C6C
+
+        .ac-trigger::after
+          display: none
+
+        .ac-trigger-custom
+          font-weight: 500
+          font-size: 20px
+          line-height: 24px
+          color: #2D2D2D
+          display: flex
+          align-items: center
+          justify-content: space-between
+          min-height: 69px
+          padding: 0
+
+          .cross
+            height: 31px
+            width: 31px
+            position: relative
+
+          .cross::before
+            position: absolute
+            left: 50%
+            content: ''
+            width: 1px
+            height: 31px
+            -webkit-transform: translate(0, -50%)
+            background: #6C6C6C
+            transform: rotate(-90deg)
+            transition: all 0.25s ease-in-out
+
+          .cross::after
+            position: absolute
+            top: 50%
+            left: 50%
+            content: ''
+            width: 1px
+            height: 31px
+            -webkit-transform: translate(0, -50%)
+            background: #6C6C6C
+            transition: all 0.25s ease-in-out
+
+        .ac-text-custom
+          font-size: 14px
+          line-height: 150%
+          color: #2D2D2D
+          max-width: 790px
+          padding: 0 0 20px 0
+
+      .ac.is-active
+        .ac-trigger-custom
+          .cross::before
+            transform: rotate(-45deg)
+            background: $brandColor
+
+      .ac.is-active
+        .ac-trigger-custom
+          .cross::after
+            transform: rotate(45deg)
+            background: $brandColor
+            top: 0
+
+.appeal
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  background: #F7F7F7
+  padding: 150px 0 150px 270px
+  &__block
+    width: 50%
+    max-width: 680px
+
+  &__block-right
+    width: 50%
+    padding-left: 200px
+    padding-top: 62px
+
+  &__heading
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+    max-width: 610px
+
+  &__link
+    font-weight: bold
+    font-size: 10px
+    line-height: 12px
+    text-align: center
+    text-transform: uppercase
+    color: #2D2D2D
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 120px
+    height: 120px
+    border-radius: 50%
+    border: 1px solid #2D2D2D
+    margin-top: 70px
+    padding: 0 25px
+
+.popup
+  background: #000000ba
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 5
+  opacity: 0
+  visibility: hidden
+  transition: all 0.8s ease 0s
+  overflow-y: auto
+  overflow-x: hidden
+  &__body
+    min-height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px
+  &__content
+    max-width: 830px
+    min-height: 530px
+    padding: 70px 115px 65px 115px
+    position: relative
+    background: #FFFFFF
+    z-index: 5
+    transform: translate(0, -100%)
+    transition: all 0.8s ease 0s
+    opacity: 0
+  &__content._active
+    transform: translate(0, 0)
+    opacity: 1
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    padding: 20px
+  &__title
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+    color: #000000
+    padding-bottom: 10px
+  &__text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+    margin-bottom: 60px
+  &__form
+    input
+      max-width: 600px
+      width: 100%
+      border-bottom: 2px solid #C4C4C4
+      margin-bottom: 60px
+      padding: 9px 0
+      &::placeholder
+        font-size: 14px
+        line-height: 150%
+        color: #000000
+  &__agreement
+    @include flex_space_between_items_center
+    margin-top: -20px
+  &__agreement-text
+    font-size: 14px
+    line-height: 150%
+    color: #676767
+    max-width: 395px
+  &__form-button
+    font-weight: bold
+    font-size: 10px
+    line-height: 12px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 120px
+    height: 120px
+    border-radius: 50%
+    border: 1px solid #2D2D2D
+    padding: 0 25px
+    background: #2D2D2D
+
+.popup-done
+  &__body
+    min-height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+  &__content
+    width: 600px
+    min-height: 345px
+    padding: 70px 70px 60px 70px
+    .popup__title
+      padding-bottom: 20px
+    .popup__text
+      margin-bottom: 40px
+    .popup-done__link
+      padding: 0 20px
+
+.popup._active,
+  opacity: 1
+  visibility: visible
+
+.popup._active .popup__content
+  transform: translate(0, 0)
+  opacity: 1
+
+.breadcrump
+  margin-top: $headerHeight
+  &__menu
+    min-height: 77px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+  &__menu-link,
+  &__menu-link-active,
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #2D2D2D
+
+  &__menu-link-active
+    color: #8D8D8D
+
+  &__menu-link::after
+    content: "/"
+    padding: 0 10px
+
+  .breadcrump__menu-link-active::after
+    display: none
+
+.concept, .series
+  &__content
+    margin-top: 43px
+    .article-box
+      display: flex
+      justify-content: space-between
+      margin-top: 50px
+      article
+        display: block
+        width: 50%
+
+.concept-slider
+  margin-top: 160px
+.concept
+  &__text-block
+    width: inherit
+  &__box
+    .swiper6-text
+      width: 50%
+      height: 500px
+
+.aesthetics-article,
+.article
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  padding: 180px 0
+
+  &__heading
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #000000
+    display: block
+    width: 100%
+
+.article-text-block
+  width: 100%
+
+.interiors
+  &__heading
+    padding-bottom: 30px
+
+.concept, .aesthetics
+  &__text
+    padding: 0 0 20px 0
+
+.concept__heading
+  padding-bottom: 40px
+
+.series
+  &__title
+    padding-bottom: 90px
+.tabs
+  position: relative
+  display: flex
+  justify-content: space-between
+  &__items
+    min-width: 33.3333%
+    max-height: 770px
+    position: absolute
+    margin-right: 100%
+  &__item
+    margin: 0 0 0 -70px
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+    color: #2D2D2D
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    transition: all 0.3s ease
+    padding: 40px 0
+  &__item:first-child
+    margin-top: -31px
+  &__item::before
+    content: ""
+    height: 1px
+    background: #000000
+    width: 50px
+    margin-right: 20px
+    pointer-events: none
+    opacity: 0
+    transition: opacity 0.3s ease
+    transition-delay: .0s
+  &__item._active
+    transform: translate(12%, 0)
+    &::before
+      opacity: 1
+      transition-delay: .3s
+      transform: translate(30%, 0)
+  &__body
+    width: 100%
+  &__block
+    display: none
+  &__block._active
+    display: block
+  &__link
+    display: block
+    margin-left: 33.3333%
+  &__link:hover
+    cursor: url(../images/svg/series_link_img.svg), pointer
+  &__link-mobile
+    display: none
+    justify-content: space-between
+    align-items: center
+    font-weight: bold
+    font-size: 10px
+    line-height: 12px
+    text-align: center
+    text-transform: uppercase
+    background: $brandColor
+    border-radius: 50%
+    width: 120px
+    height: 120px
+    color: #FFFFFF
+    padding: 20px
+    margin-left: calc(50% - 60px)
+    margin-top: 88px
+    letter-spacing: 0.5px
+  &__desc
+    padding: 49px 0 0 0
+    h3
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      color: #000000
+      padding-bottom: 20px
+  &__desc-heading
+    margin-left: 33.3333%
+
+.short-info
+  &__heading
+    max-width: 477px
+  .article-text-block
+    max-width: 790px
+
+.carried
+  &__projects
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 70px
+
+  &__projects-item
+    width: 50%
+    .swiper7, .swiper8
+      max-width: 790px
+      .swiper7-pagination,
+      .swiper8-pagination
+        bottom: 40px
+        .swiper-pagination-bullet
+          width: 6px
+          height: 6px
+          margin: 0 8.5px
+  &__projects-desc
+    h3
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      color: #000000
+      padding: 50px 0 30px 0
+    h4
+      font-weight: bold
+      font-size: 14px
+      line-height: 17px
+      text-transform: uppercase
+      color: #000000
+    .charact-box
+      margin-top: 15px
+      @include flex_space_between_items_center
+      padding-bottom: 170px
+      &__items
+        width: 100%
+      .charact-item
+        @include flex_space_between_items_center
+        p
+          font-size: 16px
+          line-height: 150%
+          color: #000000
+          padding: 10px 57px 10px 0
+          text-align: start
+
+.item-clear
+  min-width: 10px
+
+.swiper7-button-prev, .swiper7-button-next, .swiper8-button-prev, .swiper8-button-next
+  width: 50px
+
+.product
+  margin-top: 70px
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+
+  &__text-box
+    max-width: 790px
+
+  &__title
+    text-align: center
+    margin-bottom: 40px
+
+  &__description
+    margin-bottom: 20px
+
+.product-slider
+  padding: 40px 0 60px 0
+  max-width: 1920px
+  .swiper9
+
+    .swiper-wrapper-product
+      .swiper-slide
+        max-width: 790px
+      .swiper-slide-next, .swiper-slide-prev
+        filter: brightness(50%)
+        transition: filter 0.75s ease
+
+      .pic-title
+        font-size: 14px
+        line-height: 17px
+        color: #2D2D2D
+        padding-top: 20px
+        opacity: 0
+        visibility: hidden
+        transition: opacity 1s, visibility 0s linear 0.3s
+
+      .swiper-slide-active .pic-title
+        opacity: 1
+        visibility: visible
+        transition-delay: 0s
+
+    .swiper9-button-prev,.swiper9-button-next
+      position: absolute
+      width: 100px
+
+    .swiper9-button-next
+      top: 48%
+      right: 20%
+
+    .swiper9-button-prev
+      top: 48%
+      left: 20%
+
+    .swiper-pagination-product
+      position: absolute
+      max-width: 350px
+      width: 100%
+      top: 98%
+      left: 51%
+      height: 1px
+      background: #6A6A6A
+
+    .swiper-pagination-progressbar-fill
+      background-color: $brandColor
+      height: 5px
+      top: -2px
+
+  .swiper9
+    .swiper2-fraction
+      bottom: 0
+      left: 49.6%
+      max-width: 405px
+      width: 100%
+
+.facade
+  margin-top: 110px
+  @include flex_space_between_items_center
+
+  .swiper10
+    max-width: 800px
+    width: 50%
+
+  .swiper10-button-prev, .swiper10-button-next
+    width: 50px
+
+  &__article
+    align-self: flex-start
+    height: 100%
+    padding: 70px 0 0
+    width: 50%
+    max-width: 560px
+    margin-left: 50px
+
+  .article__heading
+    padding-bottom: 30px
+
+  .section__text
+    padding-bottom: 20px
+
+.interiors
+  margin-top: 180px
+
+  .swiper11-button-prev, .swiper11-button-next
+    width: 100px
+
+  &__article-box
+    position: relative
+    display: flex
+    justify-content: center
+
+    article
+      position: absolute
+      top: -120px
+      z-index: 2
+      max-width: 700px
+      min-height: 290px
+      background: #F6F6F6
+      padding: 40px 95px 50px 45px
+
+      h3
+        padding-bottom: 30px
+
+.layout
+  margin-top: 350px
+  @include flex_space_between_items_center
+
+  &__text-block
+    width: inherit
+    padding: 0px 65px 0 180px
+    align-self: flex-start
+
+  &__heading
+    padding: 10px 0 30px 0
+
+  &__charact-text-box
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 345px
+
+  &__charact-text
+    padding: 15px 0 0 0
+    h4
+      font-weight: bold
+      font-size: 14px
+      line-height: 17px
+      text-transform: uppercase
+      color: #2D2D2D
+      padding: 0 0 10px 0
+    p
+      padding: 0 0 15px 0
+
+  .swiper6
+    .swiper-pagination-left
+      .swiper-pagination-bullet-active
+        color: #2D2D2D
+        &::after
+          background: #6A6A6A
+
+.location
+  margin-top: 180px
+  @include flex_space_between_items_center
+
+  article
+    max-width: 620px
+    width: 50%
+    align-self: flex-start
+    padding: 40px 60px 0 0
+    h2
+      width: 100%
+      max-width: initial
+      padding-bottom: 30px
+    p
+      padding-bottom: 1em
+
+  .swiper10
+    max-width: 800px
+    width: 50%
+    margin: 0
+    .swiper10-button-prev, .swiper10-button-next
+      width: 50px
+
+.series-articles
+  margin-top: 180px
+  .article__heading
+    width: 50%
+    max-width: 800px
+  &__content
+    padding-bottom: 80px
+    article
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      p
+        max-width: 790px
+        width: 50%
+
+.series-carried
+  margin-top: 120px
+
+.series-cost
+  margin-top: 10px
+
+.projects
+  margin-top: 70px
+  h1
+    padding-bottom: 30px
+
+  &__content
+    margin-top: 60px
+    h2
+      padding-bottom: 30px
+      color: #B9B9B9
+
+  &__carried-box
+    @include flex_space_between_items_center
+    border-bottom: 1px solid #2D2D2D
+
+  &__carried
+    p
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      color: #2D2D2D
+      padding: 20px 0 70px 0
+
+  &__carried-box-bottom
+    border: none
+
+  &__content-bottom
+    margin-bottom: 50px
+
+.case-carried
+  display: flex
+  align-items: center
+  flex-direction: column
+
+.centered-article
+  max-width: 790px
+
+  &__text
+    padding-bottom: 20px
+
+  h2
+    text-align: center
+  img
+    margin: 40px 0 40px 0
+  h3
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+    color: #2D2D2D
+    padding: 45px 0 30px 0
+
+  .img-box
+    h3
+      padding: 35px 0 30px 0
+    img
+      margin: 0 0 30px 0
+    .img-title
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      color: #5A5A5A
+      padding-bottom: 20px
+
+    .case-carried__description
+      padding-bottom: 120px
+
+.blog
+  margin-top: 43px
+
+  &__title
+    padding-bottom: 10px
+
+  &__content
+    display: flex
+    justify-content: center
+    margin: 0 -10px 0 -10px
+    flex-wrap: wrap
+
+  &__img-box
+    max-width: 385px
+    margin: 60px 10px 0 10px
+    img
+      min-height: 250px
+
+  &__img-box-title
+    padding: 30px 0 20px 0
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #2D2D2D
+
+  &__img-box-text
+    font-size: 14px
+    line-height: 150%
+    color: #2D2D2D
+
+  &__link-box
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 100px 0 170px 0
+
+  &__link
+    padding: 0 10px
+
+.other-news
+  margin-top: 80px
+  &__title
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+    color: #2D2D2D
+
+  &__content
+    padding-bottom: 120px
+    a
+      margin-top: 40px
+
+.awards
+  margin: 40px 0 60px 0
+
+  &__block
+    h2
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      color: #2D2D2D
+
+  &__content
+    margin-top: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 790px
+
+  &__content-box
+    width: 395px
+  &__item
+    max-width: 340px
+    p
+      padding: 15px 0 50px 0
+
+.contacts
+  margin-top: 43px
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+    margin-top: 40px
+
+  &__block
+    min-width: 400px
+    max-width: 800px
+    flex: 1
+
+  &__block-left
+    padding-right: 185px
+    p
+      padding-bottom: 20px
+
+  &__heading
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #2D2D2D
+    padding-bottom: 20px
+
+  &__box
+    padding-bottom: 50px
+    p
+      max-width: 400px
+      padding: 5px 85px 0 0
+
+  &__box-horizontal
+    display: flex
+    flex-wrap: wrap
+
+  &__box-item
+    width: 400px
+    padding-top: 62px
+
+  &__box-item-heading
+    font-weight: bold
+    font-size: 48px
+    line-height: 110%
+    color: #2D2D2D
+    &::before
+      content: ">"
+      color: $brandColor
+      margin-right: 15px
+
+  &__box-item-heading-custom
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #2D2D2D
+
+  &__banner
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 334px
+    background-color: #F6F6F6
+    margin-top: 70px
+
+.history
+  margin: 170px 0 140px 0
+  display: flex
+  justify-content: space-between
+  position: relative
+  &__nav-box
+    display: flex
+    justify-content: flex-start
+    height: 630px
+    position: absolute
+    top: 0
+  &__nav-box._fixed
+    position: fixed
+    top: calc(50% - 315px)
+  &__nav-box._unfixed
+    position: absolute
+    top: calc(100% - 630px)
+  &__nav-progressbar
+    width: 1px
+    height: 100%
+    background: #2D2D2D
+    align-self: flex-end
+
+  &__nav
+    width: 100%
+  &__nav ul:first-child
+    margin-top: -50px
+  &__nav-link
+    display: block
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #2D2D2D
+    padding: 50px 137px 50px 0
+
+  [data-aos="left-animation"]
+    transform: translate(10%, 0)
+    transition: all 0.5s ease 0s
+    opasity: 1
+    &.aos-animate
+      color: $brandColor
+      transform: translate(0, 0)
+      opacity: 0.4
+      transition: all 0.5s ease 0s
+
+  &__content
+    margin-left: 200px
+  &__content-item
+    display: flex
+    justify-content: flex-start
+  &__img-box
+    position: relative
+    padding-top: 140px
+    margin-right: 20px
+  &__img-box-right
+    padding-right: 190px
+  &__img-box-title
+    position: absolute
+    top: 70px
+    left: 40px
+    font-weight: bold
+    font-size: 96px
+    line-height: 117px
+    color: #2D2D2D
+
+  [data-aos="down-animation"]
+    transform: translate(0, -25%)
+    transition: all 1s ease 0s
+    opacity: 0.5
+    &.aos-animate
+      transform: translate(0, 0)
+      transition: all 1s ease 0.1s
+      opacity: 1
+
+  &__img-box-title-right
+    left: 195px
+  &__text-box
+    padding-right: 190px
+  &__heading
+    padding: 190px 0 30px 0
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #2D2D2D
+  &__text
+    max-width: 625px
+
+.contact-us
+  margin: 160px 0 170px 0
+  display: flex
+  justify-content: space-between
+
+  &__map-box
+    #map
+      width: 950px
+      min-height: 600px
+
+  &__text-box
+    width: 50%
+    padding: 75px 0 0 105px
+
+  &__heading
+    padding-bottom: 50px
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #2D2D2D
+
+  &__firm
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #2D2D2D
+    padding-bottom: 15px
+
+  &__inn
+    font-size: 14px
+    line-height: 17px
+    color: #2D2D2D
+
+  &__block
+    margin-top: 70px
+
+  &__contacts
+    display: flex
+    padding-bottom: 25px
+    svg
+      margin-right: 10px
+    p
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #2D2D2D
+
+  &__route
+    margin-top: 45px
+
+.footer
+  background-color: #000000
+  @include flex_space_between_items_center
+  min-height: 210px
+  padding-top: 50px
+  padding-bottom: 43px
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 117px
+    max-width: 258px
+  &__logo
+    display: block
+  &__firm
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #FFFFFF
+  &__inn
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+  &__contacts,
+  &__text
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+  &__contacts
+    display: flex
+    justify-content: flex-start
+    max-width: 265px
+    svg
+      margin-right: 10px
+    p
+      max-width: 240px
+  &__link-tel
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+  &__social
+    display: flex
+    justify-content: space-evenly
+    align-items: flex-start
+    width: 250px
+    min-height: 117px
+  .social-icons
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #FFFFFF
+  // .social-icons:hover
+  //   background: $brandColor
+  // .social-icons:hover
+  //   svg
+  //     background: #FFFFFF 
+  .fab.fa-instagram
+    color: #00A8D0
+    font-size: 28px
+  .copyright
+    font-size: 0
+    line-height: 150%
+    color: #A8A7A7
+@media screen and (max-width: 1920px)
+  .swiper1
+    height: 100vh
+@media screen and (max-width: 1820px)
+  .swiper1
+    .swiper1-pagination
+      bottom: calc(4% - 4px)!important
+  .product-slider
+    .swiper9
+      .swiper9-button-prev
+        left: 18%
+      .swiper9-button-next
+        right: 18%
+
+  .appeal
+    padding: 150px 0 150px 220px
+
+@media screen and (max-width: 1720px)
+  .swiper1
+    height: 100%
+    .swiper1-pagination
+      bottom: calc(4% - 3px)!important
+
+  .appeal
+    padding: 150px 0 150px 170px
+
+@media screen and (max-width: 1600px)
+  .center
+    padding: 0 calc(50% - 700px)
+  .header-home-page__menu
+    width: 68%
+  .swiper1
+    .swiper1-pagination
+      bottom: calc(4% - 2px)!important
+    .swiper-button-next
+      right: calc(45% - 25px)
+    .swiper-button-prev
+      left: calc(45% - 25px)
+
+  .our-series
+    margin-top: 100px
+
+  .layout
+    &__heading
+      font-size: 46px
+      padding: 10px 0 20px 0
+    &__charact-text
+      p
+        padding: 0
+    .swiper6-text
+      height: 440px
+
+  .product-slider
+    .swiper9
+      .swiper9-button-prev
+        left: 10%
+      .swiper9-button-next
+        right: 10%
+      .swiper2-fraction
+        left: 49.4%
+
+  .our-series
+    .swiper2
+      .swiper2-button-next
+        top: 35%
+      .swiper2-button-prev
+        top: 65%
+      .swiper2-button-next,
+      .swiper2-button-prev
+        svg
+          width: 80px
+          height: 80px
+      .swiper-pagination-bottom
+        top: 80%
+      .swiper2-fraction-box
+        .swiper2-fraction
+          bottom: 18.4%
+
+    &__videobox
+      margin-top: 99px
+
+  // .slider-vert-box
+  //   .swiper-vertical
+  //     .swiper-wrapper
+  //       height: 440px
+
+  .individual-design
+    .swiper3,
+    .swiper3-text
+      max-height: 410px
+      .swiper-slide
+        padding: 25px 0 0 50px
+
+  .individual-design
+    &__text-block
+      padding: 0
+    &__text-box
+      margin-top: 153px
+
+  .our-production
+    &__bottom
+      background-size: 100%
+      min-height: 650px
+    &__text-block
+      padding: 20px 0
+
+  .contacts
+    &__content
+      flex-wrap: nowrap
+    &__box-horizontal
+      flex-wrap: nowrap
+    // &__block-left
+    //   padding-right:
+
+  .exclusive-design
+    .awards-block
+      .awards-content
+        .item
+          max-width: 285px
+
+  .other-news
+    &__content
+      flex-wrap: nowrap
+
+  .contact-us
+    &__map-box
+      #map
+        width: 900px
+
+  .cost
+    padding-top: 100px
+
+  .manufacture, .faq, .appeal
+    padding-top: 150px
+
+  .appeal
+    padding-bottom: 150px
+
+@media screen and (min-width: 1366px) and (max-width: 1440px)
+  .center,
+  .header-home-page
+    padding: 0 calc(50% - 46%)
+  .header-home-page__menu
+    width: 69%
+  .swiper1
+    .swiper1-pagination
+      bottom: calc(4% - 0px)!important
+    .swiper-button-next
+      right: calc(45% - 30px)
+    .swiper-button-prev
+      left: calc(45% - 30px)
+
+  .our-series
+    margin-top: 50px
+    &__heading
+      top: 60px
+    .swiper2
+      padding-top: 100px
+      .swiper-wrapper-custom
+        min-height: 645px
+        .swiper-slide-next:hover
+          cursor: url(../images/svg/slider-button-next_mid.svg), pointer
+        .swiper-slide-prev:hover
+          cursor: url(../images/svg/slider-button-prev_mid.svg), pointer
+      .swiper-pagination-bottom
+        max-width: 28%
+        left: 36%
+        top: 80%
+    &__videobox
+      margin-top: 60px
+
+  .individual-design
+    .swiper3-text
+      max-height: 410px
+    .slider-vert-box
+      &__heading
+        font-size: 36px  
+      
+      .swiper-slide
+        padding: 50px
+
+  .slider-vert-box__heading
+    font-size: 42px
+
+  .layout
+    &__heading
+      font-size: 36px
+    &__charact-text
+      padding: 10px 0 0 0
+    .swiper6-text
+      height: 410px
+
+  .product-slider
+    .swiper9
+      .swiper2-fraction
+        left: 49%
+
+  .slider-vert-box
+    .swiper-vertical
+      .swiper-wrapper
+        height: 410px
+
+  .product-slider
+    .swiper9
+      .swiper9-button-prev,.swiper9-button-next
+        width: 75px
+
+  .interiors
+    &__article-box
+      article
+        padding: 30px 40px
+
+  .aesthetics-article
+    padding: 100px 0
+
+  .carried
+    &__projects-desc
+      .charact-box
+        .charact-item
+          p
+            padding: 10px 50px 10px 0
+
+  .our-production
+    &__item
+      p
+        font-size: 14px
+
+  .exclusive-design
+    .awards-block
+      .awards-content
+        .item
+          max-width: 255px
+
+  .history
+    &__img-box-right
+      padding-right: 100px
+
+  .contact-us
+    &__map-box
+      #map
+        width: 750px
+
+  .cost
+    padding-top: 100px
+
+  .banks
+    .vtb-logo
+      margin: 0 100px 13px 0
+
+  .manufacture, .faq, .appeal
+    padding-top: 150px
+
+  .appeal
+    padding-bottom: 150px
+    &__block-right
+      padding-left: 150px
+
+@media screen and (max-width: 1365px)
+
+  .center,
+  .header-home-page
+    padding: 0 3%
+  .header-home-page__menu
+    width: 73%
+  .header
+    &__logo-box
+      margin-right: 20px
+    &__logo
+      width: 160px
+
+  .main-title
+    svg
+      width: 500px
+    .title
+      padding: 22px
+
+  .menu
+    &__link,
+    &__number,
+    &__appeal
+      font-size: 11px
+      padding: 10px
+    &__link
+      padding: 15px
+    &__select
+      width: 126px
+    &__select-current,
+    &__select-item
+      font-size: 11px
+
+  .swiper1
+    .swiper1-pagination
+      bottom: calc(4% - -3px)!important
+    .swiper-button-next
+      right: calc(45% - 50px)
+    .swiper-button-prev
+      left: calc(45% - 50px)
+
+  .our-series
+    margin-top: 50px
+    &__heading
+      top: 60px
+    &__title
+      font-size: 42px
+    &__text
+      padding: 30px 0 30px 0
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 645px
+        .swiper-slide-title
+          font-size: 18px
+      .swiper2-button-next
+        top: 33%
+      .swiper2-button-prev
+        top: 62%
+      .swiper-pagination-bottom
+        max-width: 28%
+        left: 36%
+        top: 75%
+      .swiper2-fraction-box
+        .swiper2-fraction
+          bottom: 23.5%
+
+    &__videobox
+      margin-top: 60px
+
+  .slider-vert-box
+    .swiper-vertical
+      .swiper-wrapper
+        height: 327px
+    &__text-block
+      padding: 20px 10px 0 100px
+    &__heading
+      font-size: 42px
+      padding-bottom: 25px
+  
+  .individual-design
+    .swiper3-text
+      .swiper-wrapper
+        height: 327px
+    &__text-block
+      padding: 20px 0 0 50px
+    &__heading
+      font-size: 36px
+      padding-bottom: 0
+    &__text
+      padding-top: 20px    
+      font-size: 32px
+
+  .swiper3-text
+    .swiper-wrapper
+      max-height: 327px!important
+  .individual-design
+    .swiper3-text
+      .swiper-slide
+        padding: 10px 25px
+    &__text
+      padding-top: 25px    
+
+  .our-production
+    &__item-box
+      width: 100%
+    &__item
+      width: 100%
+      .item-parag
+        font-size: 65px
+      p
+        max-width: 360px
+        width: 100%
+    &__bottom
+      background-size: 100%
+      max-height: 750px
+      height: 100%
+    &__bottom.center
+      padding: 0 250px
+    &__text-block
+      padding: 20px
+      flex-direction: column
+      transform: translate(18%, 0)
+  .concept
+    &__box
+      .swiper6-text
+        height: 350px
+
+  .exclusive-design
+    flex-direction: column-reverse
+    align-items: center
+    &__right
+      max-width: 750px
+    &__heading
+      font-size: 42px
+    &__text
+      margin-top: 25px
+    &__left
+      margin-top: 50px
+      width: 100%
+      max-width: 750px
+      padding-right: 0
+      .awards-block
+        margin-top: 30px
+
+  .carried
+    &__projects-desc
+      .charact-box
+        .charact-item
+          p
+            font-size: 14px
+            padding: 10px 40px 10px 0
+
+  .exclusive-design
+    .awards-block
+      .awards-content
+        .item
+          max-width: 380px
+
+  .product-slider
+    .swiper9
+      .swiper9-button-next
+        width: 75px
+        right: 5%
+      .swiper9-button-prev
+        width: 75px
+        left: 5%
+      .swiper2-fraction
+        left: 49%
+
+  .blog
+    &__content
+      flex-wrap: wrap
+
+  .cost
+    padding-top: 100px
+
+  .banks
+    .vtb-logo
+      margin: 0 50px 13px 0
+
+  .manufacture, .faq, .appeal
+    padding-top: 150px
+
+  .contact-us
+    &__map-box
+      #map
+        width: 870px
+    &__text-box
+      padding: 50px
+
+  .appeal
+    padding-bottom: 150px
+    &__block-right
+      padding-left: 100px
+
+@media screen and (max-width: 1330px)
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 635px
+
+@media screen and (max-width: 1280px)
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 610px
+
+  .our-production
+    &__bottom.center
+      padding: 0 100px
+
+  .individual-design
+    &__heading
+      font-size: 32px
+    &__text-block
+      transform: translate(15%, 0)
+
+@media screen and (max-width: 1200px)
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 575px
+
+@media screen and (max-width: 1140px)
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 545px
+      .swiper2-fraction-box
+        .swiper2-fraction
+          bottom: 23%
+
+  .product-slider
+    .swiper9
+      .swiper-button-next
+        right: 0
+      .swiper-button-prev
+        left: 0
+      .swiper-pagination-product
+        max-width: 340px
+        left: 52%
+
+  .individual-design
+    .swiper3, .swiper3-text
+      .swiper-wrapper
+        height: 297px
+
+
+@media screen and (max-width: 1080px)
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 520px
+
+  .individual-design
+    &__heading
+      font-size: 22px
+
+  .appeal
+    &__block-right
+      padding-left: 50px
+    &__link
+      margin-top: 30px
+
+@media screen and (max-width: 1024px)
+  .center
+    padding: 0 calc(50% - 47%)
+
+  .header-home-page,
+  .header
+    &__logo-box
+      padding: 0
+    &__logo-link
+      svg
+        width: 160px
+    &__menu
+      width: initial
+  .menu
+    &__icon
+      z-index: 5
+      display: block
+      position: relative
+      width: 35px
+      height: 26px
+      margin: 0
+    &__icon._active
+      margin: 0 40px
+  .menu
+    &__icon
+      span,
+      &::before,
+      &::after
+        left: 0
+        position: absolute
+        height: 15%
+        width: 100%
+        transition: all 0.3s ease 0s
+        background-color: #000000
+      &::before,
+      &::after
+        content: ""
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+      span
+        top: 50%
+        transform: scale(1) translate(0px, -50%)
+
+    ._active
+      &::before
+        top: 50%
+        transform: translate(0, -50px)
+        transform: rotate(-45deg)
+      span
+        transform: scale(0) translate(0, -50px)
+      &::after
+        top: 50%
+        transform: translate(0, -50px)
+        transform: rotate(45deg)
+
+    &__body
+      position: fixed
+      top: 0
+      left: -100%
+      width: 100%
+      height: 100%
+      background-color: #FFFFFF
+      padding: 40px 20px 33px 20px
+      transition: left 0.3s ease 0s
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      z-index: 1
+
+    ._active
+      left: 0
+
+    &__list
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      padding: 50px 0
+    &__list
+      li
+        margin: 0 0 30px 0
+    &__list
+      li:last-child
+        margin-bottom: 0
+
+    &__link
+      padding: 10px 20px 10px 0
+      font-size: 22px
+
+    &__contacts
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      padding: 22.5px 0
+
+    &__appeal,
+    &__number
+      padding: 7.5px 0
+
+    &__block
+      display: block
+      margin-top: 30px
+      max-width: 240px
+
+    &__text
+      display: block
+      font-size: 14px
+      line-height: 150%
+      color: #818181
+      padding: 12px 0
+
+    ._active>.menu__location
+      display: block
+      padding: 0
+
+    ._active .menu__link
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      color: #2D2D2D
+
+    ._active .menu__number
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+
+  .menu__body._active
+    overflow-y: auto
+
+  .main-title
+    svg
+      width: 430px
+    .titile
+      padding: 10px
+
+  .swiper1
+    .swiper-button-next,
+    .swiper-button-prev
+      display: none
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 480px
+      .swiper2-button-next,
+      .swiper2-button-prev
+        display: none
+      .swiper-pagination-bottom
+        max-width: 27%
+        left: 36.5%
+        top: 77%
+      .swiper2-fraction-box
+        .swiper2-fraction
+          bottom: 20.5%
+
+    &__videobox
+      .play-btn
+        left: calc(50% - 37.5px)
+        svg
+          width: 75px
+
+  .slider-vert-box
+    .swiper-vertical
+      .swiper-wrapper
+        height: 300px
+      .swiper-pagination-left
+        width: 90px
+        .swiper-pagination-bullet
+          height: 10px
+    &__text-block
+      padding: 5px 10px 0 75px
+    &__heading
+      font-size: 22px
+      padding-bottom: 20px
+    &__text
+      padding: 5px 0 10px 0
+    .swiper6-text
+      height: 310px
+
+  .swiper9
+    .swiper9-button-next,
+    .swiper9-button-prev
+      display: none
+
+  .interiors
+    .swiper11-button-prev,
+    .swiper11-button-next
+      width: 70px
+
+  .individual-design
+    margin-top: 100px
+    &__text-box
+      margin-top: 100px
+      svg
+        width: 55px
+      .text-block
+        font-size: 26px
+        max-width: 800px
+    .swiper3-text
+      max-height: 300px    
+
+  .section
+    &__title
+      font-size: 36px
+
+  .article
+    &__heading
+      font-size: 34px
+
+  .series-articles
+    &__content article
+      p
+        max-width: 650px
+
+  .facade
+    margin-top: 0
+
+  .interiors
+    &__article-box
+      article
+        padding: 20px
+        min-height: 200px
+
+    &__heading
+      padding-bottom: 10px
+
+  .layout
+    margin-top: 150px
+
+  .location
+    margin-top: 0
+
+  .our-production
+    margin-top: 50px
+    &__item
+      .item-parag
+        font-size: 60px
+        line-height: 100px
+    &__item
+      .item-parag
+        font-size: 55px
+    &__bottom
+      min-height: 550px
+      background-size: 100%
+    &__bottom.center
+      padding: 0 50px
+    &__text-block
+      padding: 20px
+      transform: translate(10%, 0)
+
+  .exclusive-design
+    flex-direction: column-reverse
+    margin: 100px 0 80px 0
+    &__heading
+      font-size: 38px
+    &__left
+      width: 100%
+      padding: 50px 95px 0 95px
+    &__right
+      max-width: 790px
+      align-self: center
+
+  .carried
+    &__projects-desc
+      .charact-box
+        p
+          padding: 10px 0
+          font-size: 14px
+
+  .cost
+    min-height: 650px
+    margin-top: 100px
+    padding: 100px 0 0 50px
+    &__form
+      padding-right: 200px
+
+  .series
+    &__content-block-link
+      width: 100px
+      height: 100px
+      margin: 0
+    &__title
+      padding-bottom: 77px
+
+  .tabs
+    margin: 0
+    flex-direction: column
+    &__items
+      display: flex
+      justify-content: space-between
+      width: 100%
+      margin: 0
+      bottom: 100%
+      padding-right: 40px
+    &__item:first-child
+      margin-top: 0
+    &__item
+      margin: 0
+      padding: 20px 0
+      &::before
+        display: none
+    &__item._active
+      color: $brandColor
+      transform: translate(0, 0)
+    &__link
+      margin: 0
+    &__link-mobile
+      display: flex
+    &__desc
+      padding: 30px 0 0 0
+    &__desc-heading
+      margin: 0
+
+  .short-info
+    &__heading
+      max-width: 477px
+    &__article
+      padding: 70px 0
+
+  .carried
+    &__title
+      padding: 0 93px 40px 93px
+    &__projects
+      margin-top: 0
+      flex-direction: column
+    &__projects-item
+      width: 100%
+      .swiper7, .swiper8
+        .swiper7-pagination,
+        .swiper8-pagination
+          bottom: 10px
+    &__projects-desc
+      padding: 0 93px
+      h3
+        padding: 20px 0 15px 0
+      .charact-box
+        padding-bottom: 60px
+
+  .banks
+    .sber-logo
+      width: 250px
+    .vtb-logo
+      width: 90px
+
+  .manufacture, .faq
+    padding-top: 100px
+
+  .faq
+    &__accordion-block
+      margin-top: 50px
+      padding-bottom: 70px
+      .accordion-container
+        .ac-custom
+          &__heading
+            .ac-trigger-custom
+              font-size: 18px
+
+  .appeal
+    padding: 50px 50px
+
+  .footer
+    &__social
+      width: 200px
+
+@media screen and (max-width: 950px)
+
+  .our-series
+    .swiper2
+      .swiper-wrapper-custom
+        min-height: 445px
+
+  .footer
+    &__block
+      max-width: 25%
+    &__logo
+      svg
+        width: 100%
+
+@media screen and (max-width: 900px)
+  .center
+    padding: 0 calc(50% - 45%)
+
+  .section
+    &__title
+      font-size: 26px
+      line-height: 32px
+
+  .header-home-page
+    &__logo-box
+      padding: 0 0 0 10px
+      svg
+        width: 140px
+    &__menu
+      align-self: flex-start
+      .menu__icon
+        width: 25px
+        height: 18px
+        margin: 30px 0
+
+    .menu__icon._active
+      margin: 40px
+
+  .header
+    .menu__icon._active
+      margin: 40px
+
+  .main-title
+    svg
+      width: 300px
+    .title
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      color: #2D2D2D
+      padding: 0
+
+  .our-series
+    margin-top: 60px
+    .swiper2
+      margin-top: 0
+      padding: 0
+      min-height: 720px
+      .swiper-wrapper-custom
+        .swiper-slide,
+        .swiper-slide-prev,
+        .swiper-slide-next
+          transform: translate(0, 0)
+      .swiper-pagination-bottom
+        top: calc(98% - 0%)
+        max-width: 90%
+        left: calc(50% - 364px)
+      .swiper2-fraction-box
+        .swiper2-fraction
+          width: 100%
+          bottom: 0
+    &__heading
+      position: initial
+    &__slider
+      padding-top: 30px
+
+  .individual-design
+    margin-top: 0
+
+  // .manufacture.center
+  //   padding: 0
+
+  .layout
+    margin-top: 10px
+    &__text-block
+      padding: 30px 0 0 0
+      .concept__text
+        padding-top: 0
+    &__charact-text
+      margin-bottom: 20px
+    .slider-vert-box
+      display: none
+
+  .location
+    flex-direction: column
+    article
+      padding: 40px 0 0 0
+      width: 100%
+    .swiper10
+      width: 100%
+      margin-top: 30px
+
+  .slider-vert-box
+    .swiper3,
+    .swiper3-text,
+    .swiper6,
+    .swiper6-text
+      display: none
+
+    .swiper-vertical
+      .swiper-wrapper
+        height: 500px
+
+  .for-mobile
+    display: block
+    flex-direction: column
+    margin-top: 10px
+    &__heading
+      display: block
+    .slider-vert-box__heading
+      margin: 30px 0 10px 0
+
+  .series-articles
+    margin-top: 70px
+    &__content
+      padding-bottom: 70px
+      article
+        flex-direction: column
+        .article__heading,
+        .section__text
+          max-width: 768px
+          width: 100%
+        .section__text
+          margin-top: 20px
+
+  .individual-design
+    &__text-box
+      margin-top: 50px
+      flex-direction: column
+      svg
+        margin-bottom: 20px
+
+  .our-production
+    &__bottom.center
+      padding: 0 20px
+    &__item
+      // max-width: 300px
+      padding: 0
+      .item-parag
+        font-size: 45px
+    &__text-block
+      transform: translate(5%, 0)
+
+  .exclusive-design
+    .awards-block
+      .awards-content
+        padding: 0
+        width: 100%
+        flex-wrap: nowrap
+        overflow-x: auto
+        min-height: 150px
+        .item
+          min-width: 260px
+        .item:nth-child(2)
+          min-width: 323px
+        .item.mobile
+          display: none
+      .about-rhizome-link.mobile
+        display: flex
+    &__right
+      max-width: 700px
+
+  .product-slider
+    max-width: 810px
+    margin: 0 auto
+    padding: 40px 0 40px 0
+    .swiper9
+      .swiper-pagination-product
+        left: 53%
+
+  .concept
+    &__content
+      .article-box
+        flex-direction: column
+        article
+          width: 100%
+  .concept-slider
+    margin-top: 0
+    .concept__text-block
+      padding: 5px 10px 0 0
+
+  .aesthetics
+    .aesthetics-article
+      flex-direction: column
+      padding: 90px 0
+      .article__heading
+        margin-bottom: 20px
+
+  .short-info
+    &__article
+      flex-direction: column
+    &__heading
+      margin-bottom: 20px
+
+  .facade
+    flex-direction: column
+    margin-top: 80px
+    .swiper10
+      width: 100%
+    &__article
+      max-width: 728px
+      width: 100%
+      margin-left: 0
+
+  .interiors.center
+    padding: 0
+  .interiors
+    margin-top: 70px
+    &__article-box
+      article
+        position: initial
+        padding: 40px 20px 20px 20px
+        z-index: 0
+        max-width: 100%
+
+  .carried
+    margin-top: 0
+    &__title
+      padding: 0 0 40px 0
+    &__projects-desc
+      padding: 0
+
+  .case-carried
+    .centered-article
+      .img-box
+        margin-top: 35px
+        .case-carried__description
+          padding-bottom: 70px
+
+  .blog__link-box
+    padding: 40px 0 70px 0
+
+  .awards
+    margin: 40px 0 0 0
+
+  .rhizome-other-news
+    margin-top: 20px
+    .blog__content
+      margin: 0
+      .blog__img-box
+        margin: 60px 0 0 0
+        max-width: 100%
+
+  .cost
+    margin-top: 10px
+    min-height: 590px
+    &__content
+      padding: 30px
+    &__form
+      padding: 0
+    .agreement
+      p
+        max-width: 400px
+
+  .banks
+    flex-direction: column
+    padding-top: 60px
+    &__text-block
+      width: 100%
+    &__logo
+      margin-top: 50px
+      padding-left: 0
+
+    .sber-logo
+      width: 230px
+    .vtb-logo
+      margin: 0 0 12px 0
+
+  .manufacture
+    &__box
+      flex-direction: column
+      margin-top: 50px
+    &__text-block
+      width: 100%
+      padding: 0
+    .swiper5
+      width: 100%
+      max-width: 700px
+      .swiper-pagination
+        display: none
+
+  .faq
+    margin-top: 70px
+
+  .appeal
+    &__block
+      width: 100%
+      max-width: 728px
+
+  .projects
+    margin-top: 12px
+    &__content
+      margin-top: 30px
+    &__carried-box
+      flex-direction: column
+
+  .blog
+    margin-top: 12px
+    &__title
+      padding-bottom: 0
+
+  .awards
+    &__content-box
+      width: 100%
+
+  .contacts
+    margin-top: 12px
+    &__content,
+    &__box-horizontal
+      flex-wrap: wrap
+    &__block-left
+      padding-right: 0
+    &__block
+      min-width: 100%
+      margin-bottom: 50px
+    &__text
+      padding: 0!important
+    &__box-horizontal2
+      flex-wrap: nowrap
+    &__box:nth-child(3)
+      padding-bottom: 0
+    &__box-item
+      padding-top: 40px
+    &__banner
+      margin: 0 -25px 0 -25px
+      min-height: 200px
+      .banner-logo
+        width: 100%
+        padding: 0 60px
+
+  .history
+    display: block
+    margin-top: 0
+    &__nav-box
+      display: none
+    &__content
+      margin: 0 auto
+    &__content-item
+      flex-direction: column
+    &__content-item:nth-child(2),
+    &__content-item:nth-child(4),
+    &__content-item:nth-child(6)
+      flex-direction: column-reverse
+    &__img-box
+      margin-right: 0
+      padding-top: 90px
+    &__img-box-right
+      padding-right: 0
+    &__img-box-title
+      top: 55px
+    &__img-box-title-right
+      left: 40px
+    &__img-box-title
+      font-size: 48px
+      line-height: 110%
+    &__heading
+      padding-top: 40px
+      font-size: 26px
+      line-height: 32px
+    &__text-box
+      padding: 0
+
+  .contact-us
+    margin: 70px 0 0 0
+    flex-direction: column-reverse
+    &__text-box
+      width: 100%
+      padding: 20px
+    &__heading
+      font-size: 26px
+      line-height: 32px
+    &__map-box
+      #map
+        width: 100%
+
+  .appeal
+    padding-top: 40px!important
+    flex-direction: column
+    &__block-right
+      min-width: 100%
+      padding: 40px 25px
+    &__heading
+      text-align: center
+      font-size: 26px
+      line-height: 32px
+      margin: 0 auto
+      padding-bottom: 40px
+    &__link
+      margin: 0 auto
+
+  .footer
+    flex-direction: row
+    align-items: flex-start
+    &__block
+      max-width: 33.3333%
+    &__block:nth-child(2)
+      margin-top: 40px
+    &__logo
+      margin: 40px 0 20px 0
+    .block-item
+      margin-bottom: 20px
+      @include flex_space_between_items_center
+      flex-wrap: wrap
+    &__firm
+      margin-bottom: 5px
+    // &__inn
+    //   width: 261px
+    &__social
+      margin-top: 40px
+      min-height: 80px
+    &__block:last-child
+      display: none
+
+  .popup
+    &__content
+      max-width: 720px
+      padding: 60px
+
+@media screen and (max-width: 820px)
+  .our-series
+    .swiper2
+      min-height: 685px
+      .swiper-pagination-bottom
+        left: calc(50% - 332px)
+
+  .product-slider
+    max-width: 740px
+    .swiper9
+      .swiper-pagination-product
+        max-width: 315px
+        top: 97.5%
+      .swiper2-fraction
+        max-width: 375px
+
+@media screen and (max-width: 768px)
+  .our-series
+    .swiper2
+      min-height: 635px
+      .swiper-pagination-bottom
+        left: calc(50% - 311px)
+  .product-slider
+    max-width: unset
+    padding: 0 calc(50% - 45%)
+    .swiper9
+      .swiper-pagination-product
+        max-width: 41%
+      .swiper2-fraction
+        max-width: 50%
+
+  .our-production
+    &__item
+      max-width: 166px
+      p
+        font-size: 14px
+
+  .exclusive-design
+    &__left
+      padding: 5%
+
+  .cost
+    .agreement
+      p
+        max-width: 55%
+
+  .footer
+    flex-direction: column
+    align-items: flex-start
+    &__block
+      max-width: 261px
+      width: 100%
+    &__logo
+      svg
+        width: 230px
+    &__firm
+      margin-bottom: 0
+      font-size: 14px
+      line-height: 17px
+    &__social
+      width: 250px
+
+@media screen and (max-width: 640px)
+  .center
+    padding: 0 calc(50% - 45%)
+
+  .our-series
+    .swiper2
+      min-height: 620px
+      .swiper-pagination-bottom
+        top: calc(87% - 1%)
+        left: calc(50% - 260px)
+      .swiper2-fraction-box
+        .swiper2-fraction
+          bottom: 74px
+
+  .product-slider
+    padding: 0 calc(50% - 45%)
+    margin: 0 auto
+    .swiper9
+      .swiper-pagination-product
+        max-width: 40%
+        left: 54%
+        top: 97%
+    //   .swiper2-fraction
+    //     left: 32%
+
+  .our-production
+    &__bottom
+      min-height: 480px
+
+@media screen and (max-width: 550px)
+  .our-series
+    .swiper2
+      min-height: 550px
+      .swiper-pagination-bottom
+        top: calc(87% - 2.5%)
+        left: calc(50% - 223px)
+  .product-slider
+    .swiper9
+      .swiper-pagination-product
+        max-width: 39%
+        top: 96.5%
+
+  .cost
+    .agreement
+      flex-direction: column
+      margin-top: 30px
+      p
+        max-width: 100%
+      a
+        margin: 40px auto
+
+@media screen and (max-width: 425px)
+
+  .center
+    padding: 0 calc(50% - 45%)
+  .header-home-page
+    &__logo-box
+      margin-left: calc(50% - 70px)
+      padding: 0
+  .main-title
+    top: 32%
+  .header
+    &__logo-box
+      padding: 0
+    .menu
+      &__icon
+        margin: 0
+        width: 25px
+        height: 17px
+
+  .breadcrump
+    &__menu-link
+      font-size: 12px
+      line-height: 15px
+
+  .swiper1
+    .slide-img
+      display: none
+    .slide-img-mobile
+      display: initial
+    .swiper1-pagination
+      bottom: calc(1% - 0px) !important
+
+  .our-series
+    &__heading
+      width: 100%
+    &__slider
+      min-height: initial
+    .swiper2
+      min-height: 400px
+      .swiper-wrapper
+        min-height: initial
+        .swiper-slide-title
+          font-size: 14px
+          line-height: 17px
+      .swiper-pagination-bottom
+        top: 95.5%
+        max-width: 85%
+        left: calc(50% - 163px)
+      .swiper2-fraction-box
+        .swiper2-fraction
+          bottom: 2%
+          .swiper2-current,
+          .swiper2-total
+            font-size: 14px
+            line-height: 17px
+            &::before,
+            &::after
+              font-size: 14px
+              line-height: 17px
+
+  .slider-vert-box
+    .swiper-vertical
+      width: 100%
+      max-width: 320px
+    .swiper3-text
+      padding: 30px 0 0 0!important
+    &__heading
+      font-size: 26px
+      line-height: 32px
+    .swiper-vertical
+      .swiper-wrapper
+        height: 300px
+
+  .for-mobile
+    display: block
+    h2
+      padding-top: 30px
+
+  .individual-design
+    &__text-box
+      margin-top: 60px
+      flex-direction: column
+      justify-content: flex-start
+      min-height: inherit
+      svg
+        width: 40px
+        margin-bottom: 20px
+      .text-block
+        font-size: 16px
+        line-height: 20px
+
+  .our-production
+    &__top
+      flex-direction: column
+      justify-content: flex-start
+    &__heading,
+    &__text
+      width: 100%
+    &__heading
+      padding: 60px 0 0 0
+    &__text
+      padding-top: 22px
+    &__bottom
+      min-height: 435px
+      margin-top: 60px
+      background: url(../images/our-production-img-mobile.jpg) top center no-repeat
+      background-size: 100%
+    &__text-block
+      padding: 0
+      flex-direction: column
+      transform: none
+    &__item-box
+      width: 100%
+      margin-bottom: 38px
+    &__item
+      display: flex
+      flex-direction: column
+      min-height: 73px
+      max-width: 146px
+      .item-parag
+        font-size: 26px
+        line-height: 32px
+      p
+        font-size: 12px
+        line-height: 150%
+
+  .exclusive-design
+    &__right
+      max-width: 400px
+    .swiper4-button-prev,
+    .swiper4-button-next
+      width: 30px
+    &__left
+      padding: 0
+    &__heading
+      font-size: 26px
+      line-height: 32px
+    .awards-block
+      .awards-content
+        .item.mobile
+          display: none
+      .about-rhizome-link.mobile
+        display: flex
+
+  .rhizome-other-news
+    .blog__content
+      flex-wrap: nowrap
+      justify-content: flex-start
+      overflow-x: scroll
+      padding-bottom: 70px
+      .blog__img-box
+        margin-right: 20px
+        min-width: 267px
+
+  .cost
+    &__title
+      font-size: 26px
+      line-height: 32px
+      padding-top: 70px
+    &__form
+      padding: 0
+    &__input-box
+      margin-top: 50px
+      flex-direction: column
+      input
+        width: 100%
+        margin-bottom: 50px
+    &__message-box
+      margin-top: 0
+    .agreement
+      p
+        font-size: 12px
+
+  .banks
+    flex-direction: column
+    padding-top: 60px
+    &__heading
+      font-size: 26px
+      line-height: 32px
+    &__text-block
+      width: 100%
+    &__logo
+      width: 100%
+      padding: 51px 0 70px 0
+      .sber-logo
+        padding-right: 20px
+        width: 200px
+      .vtb-logo
+        padding-left: 20px
+        margin: 0 0 11px 0
+        width: 90px
+
+  .manufacture__text-block.mobile
+    display: none
+
+  .faq
+    &__heading
+      font-size: 26px
+      line-height: 32px
+    &__accordion-block
+      .accordion-container
+        .ac-custom
+          .ac-trigger-custom
+            .ac-trigger-box
+              max-width: 275px
+              font-size: 14px
+              line-height: 17px
+              padding: 0
+            .cross
+              width: 20px
+              height: 20px
+              &::before,
+              &::after
+                height: 20px
+
+  .footer
+    flex-direction: column
+    align-items: flex-start
+    // &__block
+    //   max-width: 100%
+    &__block:nth-child(2)
+      margin-top: 0
+    &__logo
+      margin: 40px 0 20px 0
+    // .block-item
+    //   margin-bottom: 20px
+    //   @include flex_space_between_items_center
+    // &__firm,
+    // &__inn
+    //   width: 261px
+    //   height: 17px
+    //   left: 20px
+    //   font-size: 14px
+    //   line-height: 17px
+    &__social
+      margin-top: 30px
+      min-height: 80px
+    &__block:last-child
+      display: none
+
+  .concept
+    .article-box
+      flex-direction: column
+      article
+        width: 100%
+    &__box
+      .swiper6,
+      .swiper6-text
+        display: none
+      .for-mobile
+        img
+          margin-top: 10px
+        &__heading
+          padding-top: 60px
+          font-weight: bold
+          font-size: 14px
+          line-height: 17px
+          color: $brandColor
+    &__text
+      padding: 5px 0
+
+  .concept-slider
+    margin-top: 0
+
+  .aesthetics
+    .article
+      padding: 70px 0
+      flex-direction: column
+      &__heading
+        font-size: 18px
+        line-height: 22px
+        padding-bottom: 20px
+
+  .section
+    &__title
+
+      width: 100%
+
+  .tabs
+    &__item
+      margin: 0
+      font-size: 14px
+      line-height: 17px
+
+  .short-info
+    &__article
+      padding: 70px 0 90px 0
+      flex-direction: column
+    &__heading
+      font-size: 18px
+      line-height: 22px
+
+  .carried
+    &__projects-item
+      .swiper7-button-prev, .swiper7-button-next, .swiper8-button-prev, .swiper8-button-next
+        width: 30px
+    &__projects-desc
+      .charact-box
+        padding-bottom: 60px
+        flex-direction: column
+
+  .product
+    margin-top: 0
+    &__text-box
+      width: 100%
+
+  .product-slider
+    .swiper9
+      .swiper-wrapper-product
+        min-height: 320px
+        .swiper-slide
+          width: 100%
+        .pic-title
+          padding-left: 10px
+      .swiper-pagination-product
+        left: 7%
+        top: 86%
+        max-width: 85%
+      .swiper9-button-next,
+      .swiper9-button-prev
+        display: none
+      .swiper2-fraction
+        max-width: 100%
+        left: 0
+        bottom: 11%
+
+  .facade
+    flex-direction: column
+    .swiper10
+      max-width: 100%
+      .swiper10-button-prev,
+      .swiper10-button-next
+        width: 30px
+      .swiper10-button-prev,
+      .swiper10-button-next
+        svg
+          display: none
+      .swiper10-button-prev
+        background: url(../images/swiper10-btn-mobile-prev.svg) top center no-repeat
+      .swiper10-button-next
+        background: url(../images/swiper10-btn-mobile-next.svg) top center no-repeat
+    &__article
+      padding: 30px 0 0 0
+
+  .article__heading
+    font-size: 18px
+    line-height: 22px
+
+  .interiors.center
+    padding: 0
+  .interiors
+    margin-top: 70px
+    .swiper11-button-prev, .swiper11-button-next
+      width: 30px
+      svg
+        display: none
+    .swiper11-button-prev
+      left: 25px
+      background: url(../images/swiper10-btn-mobile-prev.svg) top center no-repeat
+    .swiper11-button-next
+      right: 25px
+      background: url(../images/swiper10-btn-mobile-next.svg) top center no-repeat
+
+  .layout
+    margin-top: 50px
+    .for-mobile
+      &__heading
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        padding-bottom: 10px
+        color: $brandColor
+        display: block
+
+  .location
+    margin-top: 50px
+    article
+      padding: 0
+    .article__heading
+      font-size: 26px
+      line-height: 32px
+    .swiper10
+      max-width: 100%
+      .swiper10-button-prev,.swiper10-button-next
+        width: 30px
+        svg
+          display: none
+      .swiper10-button-prev
+        background: url(../images/swiper10-btn-mobile-prev.svg) top center no-repeat
+      .swiper10-button-next
+        background: url(../images/swiper10-btn-mobile-next.svg) top center no-repeat
+
+  .series-articles
+    margin-top: 70px
+    &__content
+      article
+        flex-direction: column
+        .article__heading
+          font-size: 26px
+          line-height: 32px
+          padding: 0 0 20px 0
+
+  .carried
+    &__projects-desc
+      .charact-box
+        .charact-item
+          p
+            padding: 5px 40px 5px 0
+
+  .series-carried
+    margin-top: 0
+
+  .projects
+    &__carried
+      p
+        font-size: 14px
+        line-height: 17px
+        padding: 20px 0 30px 0
+
+  .cost
+    &__content
+      padding: 0
+
+  .contacts
+    &__box
+      p
+        padding: 0 20px 0 0
+    &__box-item-heading,
+    &__box-item-heading-custom
+      font-size: 26px
+      line-height: 32px
+    &__box-item-text
+      font-size: 12px
+      line-height: 150%
+    &__banner
+      .banner-logo
+        padding: 0 20px
+
+  .history
+    margin: 170px 0 70px 0
+
+  .contact-us
+    &__heading
+      padding-bottom: 30px
+    &__block
+      margin-top: 40px
+    &__route
+      margin-top: 15px
+
+  .popup
+    &__content
+      max-width: 100%
+      padding: 50px 20px 56px 20px
+    &__form
+      input
+        width: 100%
+        margin-bottom: 40px
+    &__form-button
+      margin-top: 20px
+    &__close
+      top: 0
+      right: 0
+    &__agreement
+      flex-direction: column
+
+  .popup-done__link
+    margin-left: calc(50% - 60px)
+
+@media screen and (max-width: 375px)
+  // .center
+  //   padding: 0 calc(50% - 167.5px)
+
+  .our-series
+    &__heading
+      width: 100%
+    .swiper2
+      min-height: 350px
+      .swiper-pagination-bottom
+        top: 95%
+        max-width: 249px
+        left: calc(50% - 125px)
+        width: 100%
+
+  .product-slider
+
+    .swiper9
+      .swiper-pagination-product
+        top: 77%
+        max-width: 83%
+        left: 8%
+        width: 100%
+      .swiper2-fraction
+        left: 0
+        bottom: 20%
+
+  .exclusive-design
+    &__right
+      max-width: 335px
+
+  .banks
+    &__text-block
+      margin-top: 60px
+
+@media screen and (max-width: 320px)
+  .center
+    padding: 0 calc(50% - 150px)
+
+  .our-series
+    .swiper2
+      min-height: 315px
+
+  .product-slider
+    padding: 0 calc(50% - 150px)
+
+  .our-production
+    &__bottom.center
+      padding: 0 10px

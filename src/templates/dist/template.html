@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header-home-page center">
+        <div class="header-home-page__logo-box"><a class="header-main-page__logo-link" href="index.html">
+            <svg width="200" height="111"> 
+              <use xlink:href="./assets/images/sprite.svg#platformahome_logo1" alt="logo-img"></use>
+            </svg></a></div>
+        <div class="header-home-page__menu menu">
+          <div class="menu__icon"> <span> </span></div>
+          <nav class="menu__body">
+            <div class="menu__location"> 
+              <div class="menu__select">
+                <div class="menu__select-current">Санкт‑Петербург</div>
+                <div class="menu__select-icon">   </div>
+              </div>
+              <div class="menu__select-body">
+                <div class="menu__select-item">Санкт‑Петербург </div>
+                <div class="menu__select-item">Другой город</div>
+                <div class="menu__select-item">Другой город 2</div>
+                <div class="menu__select-item">Другой город 3</div>
+              </div>
+            </div>
+            <ul class="menu__list">
+              <li><a class="menu__link" href="concept.html">Концепция</a></li>
+              <li><a class="menu__link" href="catalog.html">Серии</a></li>
+              <li><a class="menu__link" href="projects.html">Проекты</a></li>
+              <li><a class="menu__link" href="blog.html">Блог</a></li>
+              <li><a class="menu__link" href="contacts.html">О компании</a></li>
+            </ul>
+            <div class="menu__contacts"><a class="menu__number" href="tel:+78002343763">8 (800) 234-37-63</a><a class="menu__appeal popup-link" href="#popup">Обратиться к нам</a></div>
+            <div class="menu__block"><a class="menu__text" href="#">Политика конфеденциальности предоставляемых данных </a><a class="menu__text" href="#">Пользовательское соглашение </a><a class="menu__text" href="https://ra-studio.ru/">Сайт сделал: RA-Studio</a></div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div class="popup" id="popup">
+      <div class="popup__body">
+        <div class="popup__content"><a class="popup__close close-popup" href="#">
+            <svg width="15" height="15">
+              <use xlink:href="./assets/images/sprite.svg#close-pop-up"></use>
+            </svg></a>
+          <p class="popup__title">Обратиться к нам</p>
+          <p class="popup__text">Заполните форму и мы вам перезвоним в ближайшее время</p>
+          <form class="popup__form" action="#">
+            <input type="text" placeholder="Ваше имя">
+            <input type="tel" placeholder="Ваш телефон">
+            <div class="popup__agreement">
+              <p class="popup__agreement-text">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с Пользовательским соглашением</p><a class="popup-link popup__form-button" href="#popup_2">Отправить</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-done" id="popup_2"> 
+      <div class="popup__body popup-done__body">
+        <div class="popup__content popup-done__content">    <a class="popup__close close-popup" href="#">
+            <svg width="15" height="15">
+              <use xlink:href="./assets/images/sprite.svg#close-pop-up"></use>
+            </svg></a>
+          <p class="popup__title">Спасибо за обращение</p>
+          <p class="popup__text">Наш менеджер свяжется с вами в течении 15 минут</p><a class="popup-done__link popup__form-button" href="index.html">На главную</a>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popup_3">
+      <div class="popup__body">
+        <div class="popup__content"><a class="popup__close close-popup" href="#">
+            <svg width="15" height="15">
+              <use xlink:href="./assets/images/sprite.svg#close-pop-up"></use>
+            </svg></a>
+          <p class="popup__title">Скачать каталог</p>
+          <p class="popup__text"></p>
+          <form class="popup__form" action="#">
+            <input type="text" placeholder="Ваше имя">
+            <input type="email" placeholder="E-mail">
+            <div class="popup__agreement">
+              <p class="popup__agreement-text">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с Пользовательским соглашением</p><a class="popup-link popup__form-button" href="#popup_4">Отправить </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-done" id="popup_4"> 
+      <div class="popup__body popup-done__body">
+        <div class="popup__content popup-done__content"><a class="popup__close close-popup" href="#">
+            <svg width="15" height="15">
+              <use xlink:href="./assets/images/sprite.svg#close-pop-up"></use>
+            </svg></a>
+          <p class="popup__title">Спасибо за заявку!</p>
+          <p class="popup__text">Каталог выслан на электронную почту, указанную в форме</p><a class="popup-done__link popup__form-button" href="index.html">На главную  </a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer center">
+      <div class="footer__block"> <a class="footer__logo" href="index.html">
+          <svg width="230" height="59">
+            <use xlink:href="./assets/images/sprite.svg#logo_horizont2"></use>
+          </svg></a>
+        <div class="block-item">       
+          <p class="footer__firm">АО «ПО «ПНСК»</p>
+          <p class="footer__inn">ИНН: 4719016582          </p>
+        </div>
+      </div>
+      <div class="footer__block">
+        <div class="footer__contacts">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#phone-icon"></use>
+          </svg>
+          <p><a class="footer__link-tel" href="tel:88002343763"> 8 (800) 234-37-63</a></p>
+        </div>
+        <div class="footer__contacts">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#letter-icon"></use>
+          </svg>
+          <p>sale@plat-forma.pro</p>
+        </div>
+        <div class="footer__contacts">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#placeholder-icon"></use>
+          </svg>
+          <p>г. Санкт-Петербург, Красное Село, улица Восстановления, 66    </p>
+        </div>
+      </div>
+      <div class="footer__social"><a class="social-icons" href="https://www.instagram.com/platforma.pro/" target="_blank"><i class="fab fa-instagram"></i></a><a class="social-icons" href="https://facebook.com" target="_blank">
+          <svg width="11" height="24">
+            <use xlink:href="./assets/images/sprite.svg#fb-icon"></use>
+          </svg></a><a class="social-icons" href="https://api.whatsapp.com/send?phone=89219404578" target="_blank">
+          <svg width="20" height="20">
+            <use xlink:href="./assets/images/sprite.svg#whatsapp-icon"></use>
+          </svg></a><a class="social-icons" href="tg://resolve?domain=89219404578" target="_blank">
+          <svg width="23" height="20">
+            <use xlink:href="./assets/images/sprite.svg#tg-icon">               </use>
+          </svg></a></div>
+      <div class="footer__block"><a class="footer__text" href="#">Политика конфиденциальности предоставляемых данных </a><a class="footer__text" href="#">Пользовательское соглашение </a><a class="copyright" href="https://ra-studio.ru/">Разработка сайта: RA-Studio          </a></div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5eef817402.js" crossorigin="anonymous"></script>
+    <script src="assets/scripts/imask.min.js"></script>
+    <script src="assets/scripts/accordion.min.js"></script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=aaf0ec15-8970-4357-b2ef-1c76ab7adb11&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

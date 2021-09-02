@@ -1,0 +1,159 @@
+extends ../template copy
+
+block variables
+    - var title = 'Контакты'
+    - var contactForm = true
+
+block content
+    main
+        .wrapper 
+            nav.breadcrump.center
+                ul.breadcrump__menu
+                    li 
+                        a.breadcrump__menu-link(href="index.html") Главная 
+                    li  
+                        a.breadcrump__menu-link.breadcrump__menu-link-active(href="contacts.html") О компании
+            section.contacts.center
+                h2.contacts__title.section__title О компании
+                .contacts__content
+                    .contacts__block.contacts__block-left
+                        p.contacts__text.section__text Строительство – сфера непростая. В ней постоянно усложняются стандарты, появляются новые материалы и технологии, растут требования к качеству каждого вида работ и объектов в целом. И это правильно, ведь от качества строительства в итоге зависит наш комфорт жизни. 
+                        p.contacts__text.section__text Архитектурные концепции модульных домов PLATforma Home разработаны архитектурным бюро RHIZOME. По итогам 2020 года бюро входит в число 100 лучших дизайнеров и архитекторов России по версии американского Architectural Digest (журнал со 100-летней историей, ежегодно отмечает самых влиятельных дизайнеров интерьеров и архитекторов со всего мира).
+                        p.contacts__text.section__text У компаний PLATforma и RHIZOME уже есть позитивный опыт совместной работы ― это строительство дизайн-отель «Точка на карте. Приозерск».
+                    .contacts__block
+                        .contacts__box
+                            h3.contacts__heading Наша миссия
+                            p.contacts__text.section__text Миссия проекта PLATforma Home — Высокое качество строительства – высокое качество жизни!
+                        .contacts__box 
+                            h3.contacts__heading Опыт и профессионализм
+                            .contacts__box-horizontal
+                                p.contacts__text.section__text Затройщик ― компания PLATforma, успешно создавшая по технологии модульного строительства дизайн-отель «Точка на карте. Приозерск» (в рейтинге лучших дизайнерских отелей России по версии издания Elle Decoration, победитель премии «AD Design Award 2020» в номинации «Лучший отель», лауреат Премии «Петербург будущего 2019» по версии издания «СОБАКА.РУ»).
+                                p.contacts__text.section__text Компания PLATforma осуществляет функции генерального подрядчика, проектирования и строительства домов «под ключ», а также выполняет весь комплекс слаботочных и инженерных сетей.  Производство расположено в Санкт‑Петербурге, завод общей площадью более 12 гектаров. 
+                        .contacts__box 
+                            h3.contacts__heading Мы делаем свою работу качественно
+                            p.contacts__text.section__text PLATforma входит в холдинг «ПНСК», основные критерии выбора которого опыт, профессионализм и безупречная репутация:
+                        .contacts__box
+                            .contacts__box-horizontal.contacts__box-horizontal2
+                                .contacts__box-item
+                                    p.contacts__box-item-heading 100
+                                    p.contacts__box-item-text Отличных специалистов
+                                .contacts__box-item
+                                    p.contacts__box-item-heading 30
+                                    p.contacts__box-item-text Лет успешной работы
+                            .contacts__box-horizontal.contacts__box-horizontal2          
+                                .contacts__box-item
+                                    p.contacts__box-item-heading-custom Удобство
+                                    p.contacts__box-item-text Комплексный подход к реализации каждого проекта  
+                                .contacts__box-item
+                                    p.contacts__box-item-heading-custom Качество
+                                    p.contacts__box-item-text Международные стандарты качества
+                .contacts__banner
+                    a.banner-link(href="index.html")
+                        svg.banner-logo(width="400" height="100")  
+                            use(xlink:href="./assets/images/sprite.svg#banner_logo_horizont" alt="logo-img")       
+            section.history.center
+                .history__nav-box 
+                    .history__nav-progressbar
+                    nav.history__nav 
+                        ul
+                            li 
+                                a.history__nav-link(href="#" data-goTo="#item1991" data-aos="left-animation" data-aos-anchor=".animated1" data-aos-anchor-placement="top-center") 1991 
+                            li 
+                                a.history__nav-link(href="#" data-goTo="#item2000" data-aos="left-animation" data-aos-anchor=".animated2" data-aos-anchor-placement="top-center") 2000
+                            li 
+                                a.history__nav-link(href="#" data-goTo="#item2010" data-aos="left-animation" data-aos-anchor=".animated3" data-aos-anchor-placement="top-center") 2010
+                            li 
+                                a.history__nav-link(href="#" data-goTo="#item2013" data-aos="left-animation" data-aos-anchor=".animated4" data-aos-anchor-placement="top-center") 2013
+                            li 
+                                a.history__nav-link(href="#" data-goTo="#item2018" data-aos="left-animation" data-aos-anchor=".animated5" data-aos-anchor-placement="top-center") 2018
+                            li 
+                                a.history__nav-link(href="#" data-goTo="#item2021" data-aos="left-animation" data-aos-anchor=".animated6" data-aos-anchor-placement="top-center") 2021
+                .history__content 
+                    .history__content-item#item1991
+                        .history__img-box
+                            p.history__img-box-title.animated1(data-aos="down-animation" data-aos-anchor-placement="top-center") 1991
+                            img(src="./assets/images/history-img1.png")
+                        .history__text-box
+                            p.history__heading Создание
+                            p.history__text.section__text  Было создано объединение «ПНСК». Офис и завод организации находился в культурной столице России – Санкт-Петербурге. Площадь производства составляет 12 Га.
+                    .history__content-item#item2000
+                        .history__text-box
+                            p.history__heading Развитие
+                            p.history__text.section__text Модульные технологии набирают популярность на Российском рынке. «ПНСК» активно развивается.
+                            //- p.history__text.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .history__img-box.history__img-box-right
+                            p.history__img-box-title.animated2.history__img-box-title-right(data-aos="down-animation" data-aos-anchor-placement="top-center") 2000
+                            img(src="./assets/images/history-img2.png")
+                    .history__content-item#item2010
+                        .history__img-box
+                            p.history__img-box-title.animated3(data-aos="down-animation" data-aos-anchor-placement="top-center") 2010
+                            img(src="./assets/images/history-img3.png")
+                        .history__text-box
+                            p.history__heading Рост
+                            p.history__text.section__text Производственное объединение «ПНСК» становится поставщиком технологического оборудования и модульных зданий для лидеров рынка, в числе клиентов «Лукойл», «Роснефть», «Газпромнефть», «Транснефть»   
+                    .history__content-item#item2013
+                         .history__text-box
+                            p.history__heading Первые среди первых 
+                            p.history__text.section__text Был выигран тендер на поставку резервуарного парка для космодрома «Восточный». Расширяется линейка эксплуатационного оборудования.
+                         .history__img-box.history__img-box-right#2013
+                            p.history__img-box-title.animated4.history__img-box-title-right(data-aos="down-animation" data-aos-anchor-placement="top-center") 2013
+                            img(src="./assets/images/history-img4.png")
+                    .history__content-item#item2018
+                        .history__img-box
+                            p.history__img-box-title.animated5(data-aos="down-animation" data-aos-anchor-placement="top-center") 2018
+                            img(src="./assets/images/history-img5.png") 
+                        .history__text-box
+                            p.history__heading Platforma 
+                            p.history__text.section__text Проект PLATforma выходит на рынок с новыми модульными зданиями для В2В сегмента. Начало строительства отеля «Точка на карте» в Приозерске, который в 2019 году займет все ключевые призы рынка в номинации «Лучший отель»   
+                    .history__content-item#item2021
+                        .history__text-box 
+                            p.history__heading Platforma Home
+                            p.history__text.section__text Выход на рынок с проектом современных модульных домов, в которых комфортно проживать круглогодично. Разработка первых 3-х серий домой для частных клиентов.
+                        .history__img-box.history__img-box-right
+                            p.history__img-box-title.animated6.history__img-box-title-right(data-aos="down-animation" data-aos-anchor-placement="top-center") 2021
+                            img(src="./assets/images/history-img6.png")
+            section.banks.center            
+                .banks__text-block
+                    h3.banks__heading Наш банк партнер
+                    p.banks__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                             
+                .banks__logo
+                    svg.sber-logo(width="300" height="50")
+                        use(xlink:href="./assets/images/sprite.svg#newsber-seeklogo1")
+                    svg.vtb-logo(width="112" height="40")
+                        use(xlink:href="./assets/images/sprite.svg#vtb-logo")
+            section.contact-us
+                .contact-us__map-box
+                    #map  
+                .contact-us__text-box
+                    p.contact-us__heading Как с нами связаться
+                    p.contact-us__firm АО «ПО «ПНСК»
+                    p.contact-us__inn ИНН: 4719016582
+                    .contact-us__block 
+                        .contact-us__contacts 
+                            svg(width="15" height="15")
+                                use(xlink:href="./assets/images/sprite.svg#phone-icon-blue")
+                            p +7 (812) 336-45-00        
+                        .contact-us__contacts 
+                            svg(width="15" height="15")
+                                use(xlink:href="./assets/images/sprite.svg#letter-icon-blue")
+                            p sale@plat-forma.pro
+                        .contact-us__contacts
+                            svg(width="15" height="15")
+                                use(xlink:href="./assets/images/sprite.svg#placeholder-for-locate-blue")
+                            p г. Санкт-Петербург, Красное&nbsp;Село, улица&nbsp;Восстановления,&nbsp;66 
+                    .contact-us__contacts.contact-us__route
+                        svg(width="15" height="15")
+                            use(xlink:href="./assets/images/sprite.svg#route-icon")
+                        p Показать проезд на карте
+
+            section.appeal.center
+                .appeal__block
+                    img.appeal__img(src="assets/images/appeal-img.png")       
+                .appeal__block.appeal__block-right
+                    h3.appeal__heading Хотели бы узнать больше?
+                    a.appeal__link.popup-link(href="#popup") Обратиться к нам
+        
+
+                        
+                                 
+                           

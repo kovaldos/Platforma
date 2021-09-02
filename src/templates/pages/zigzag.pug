@@ -1,0 +1,417 @@
+extends ../template copy
+
+block variables
+    - var title = 'Серии'
+    - var contactForm = true
+
+block content
+    main
+        .wrapper 
+            nav.breadcrump.center
+                ul.breadcrump__menu
+                    li 
+                        a.breadcrump__menu-link(href="index.html") Главная 
+                    li  
+                        a.breadcrump__menu-link(href="catalog.html") Серии
+                    li  
+                        a.breadcrump__menu-link.breadcrump__menu-link-active(href="zigzag.html") Зиг-Заг
+            section.product.center
+                h1.product__title.section__title Зиг Заг
+                article.product__text-box
+                    p.product__description.section__text Дом Зиг-Заг содержит три спальных комнаты. Благодаря своей форме этот дом отлично подойдет для участков большой площади. Данную серию отличает наличие определенных элементов: террасы-внутреннего двора, стеклянной галереи и коридора с окном. Окна расположены на одной стороне дома, обеспечивая одинаковый вид из всех помещений. Наличие панорамных окон визуально увеличивают площадь дома. Такой дом станет стильным и современным вариантом дачного дома.
+                    //- p.product__description.section__text Mauris id in ut dignissim arcu proin nam ac diam. Nisi tincidunt porttitor viverra in lorem netus. Vitae ipsum pretium facilisi enim, volutpat eget sem. Felis at elit platea mauris, integer orci, natoque vitae dapibus. Lectus tristique facilisis felis iaculis habitant turpis eget. Orci accumsan nisl, consequat, posuere. Venenatis eget ut massa ac. Ac massa dignissim quam tincidunt diam. Lobortis velit arcu rutrum morbi enim cras non, ornare vestibulum. Nunc id fermentum erat dolor tellus. Consectetur nec nullam augue massa. Quisque sit tellus tempus velit in. Nisl tincidunt turpis ut donec volutpat est elit egestas molestie. Nibh tortor at venenatis elementum nulla aenean pellentesque. Nisl tincidunt proin lobortis integer bibendum malesuada lectus hac.
+            section.product-slider
+                .swiper-container.swiper9
+                    .swiper-wrapper.swiper-wrapper-product
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title.pic-title-active Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/cabin-img.jpg" alt="slider-image")
+                            p.pic-title Подпись под фото
+                    .swiper-button-prev.swiper9-button-prev
+                        svg(width="100" height="100")
+                            use(xlink:href="./assets/images/sprite.svg#slider-link-left")
+                    .swiper-button-next.swiper9-button-next
+                        svg(width="100" height="100")
+                            use(xlink:href="./assets/images/sprite.svg#slider-link")
+                    .swiper-pagination.swiper-pagination-product
+                    .swiper2-fraction-box
+                        .swiper2-fraction
+                            .swiper2-current 1
+                            .swiper2-total 1               
+            section.facade.center                            
+                .swiper-container.swiper10
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="assets/images/facade-slider-img.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/facade-slider-img.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/facade-slider-img.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/facade-slider-img.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/facade-slider-img.png" alt="slider-image")
+                    .swiper-button-prev.swiper10-button-prev
+                        svg(width="50" height="50")
+                            use(xlink:href="./assets/images/sprite.svg#facade-slider-arrow-left")
+                    .swiper-button-next.swiper10-button-next
+                        svg(width="50" height="50")
+                            use(xlink:href="./assets/images/sprite.svg#facade-slider-arrow-right")
+                .facade__article 
+                    article 
+                        h2.article__heading Фасады
+                        p.section__text Дизайнеры PLATforma Home разработали различные варианты фасадов для наших домов: от более интересного и яркого с деревянной обивкой (планкен, имитация бруса, американка), до минималистичного варианта из фиброцементных плит. Мы можем сделать их адаптацию под разные текстуры на ваш выбор. Также в своей работе активно используем технологию вентилируемого фасада из керамогранита.
+            section.interiors.center 
+                .swiper-container.swiper11
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="assets/images/interiors-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/interiors-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/interiors-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/interiors-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/interiors-slider-img1.png" alt="slider-image")
+                    .swiper-button-prev.swiper11-button-prev
+                        svg(width="100" height="100")
+                            use(xlink:href="./assets/images/sprite.svg#swiper11-arrow-left")
+                    .swiper-button-next.swiper11-button-next
+                        svg(width="100" height="100")
+                            use(xlink:href="./assets/images/sprite.svg#swiper11-arrow-right")
+                .interiors__article-box 
+                    article 
+                        h2.article__heading Интерьеры
+                        p.section__text Модульные дома набирают популярность. Каждый хозяин хочет сделать свой дом самым уютным, от сюда такое разнообразие возможных интерьеров. Снаружи дом может быть сделан под дерево, плитку и даже мрамор. Но оформление внутри дома всегда будет более значимым. Оформить дом внутри можно как угодно. Сейчас часто выбирают стиль Лофт. Минимализм в интерьере, сдержанность цветовой палитры. Использование панорамных окон добавляет дому света и простора. Наши дизайнеры помогут вам подобрать наиболее удачное оформление модульного дома.
+            section.layout.center 
+                .concept__box.slider-vert-box
+                    .swiper-container.swiper6.swiper-vertical
+                        .swiper-pagination.swiper-pagination-left
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                            .swiper-slide
+                                img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                            .swiper-slide
+                                img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                            .swiper-slide
+                                img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                            .swiper-slide
+                                img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                    .swiper-container.swiper6-text
+                        .swiper-wrapper
+                            .swiper-slide                        
+                                .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 1
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м²
+                            .swiper-slide                        
+                                .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 2
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м² 
+                            .swiper-slide                        
+                                .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 3
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м²
+                            .swiper-slide                        
+                                .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 4
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м²
+                            .swiper-slide                        
+                                .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 5
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м²
+                .for-mobile
+                    p.for-mobile__heading 01
+                    img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                    .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 1
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м²                 
+
+                    p.for-mobile__heading 02
+                    img(src="assets/images/layout-slider-img1.png" alt="slider-image")
+                    .layout__text-block.slider-vert-box__text-block
+                                    h2.layout__heading.slider-vert-box__heading Планировка 2
+                                    p.concept__text.slider-vert-box__text На выбор подходящий размер и конфигурация дома для разных земельных участков и разного состава семьи (молодая пара, семья с маленьким ребенком, дом для большой семьи).
+                                    .layout__charact-text-box
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь дома
+                                            p 27.56 м²     
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Размер
+                                            p 10,5 х 3,4 м м
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Комнаты
+                                            p Прихожая, кухня, спальня, санузел, хозкомната    
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Количество спален
+                                            p 1
+                                        .layout__charact-text.slider-vert-box__text
+                                            h4 Площадь открытых террас
+                                            p 3,1 м²
+            section.location.center 
+                article 
+                    h2.article__heading Расположение на участке
+                    p.section__text На ваш выбор разработан широкий ассортимент фасадов: от самого креативного варианта - изящного деревянного фасада с термодоской (планкен, имитация бруса, американка), до простого и локаничного фасада из фиброцементных плит белого цвета под текстурную штукатурку или под текстуру бетона в сочетании в термодеревом. Также применяем технологию вентилируемого фасада из керамогранита.
+                    p.section__text На ваш выбор разработан широкий ассортимент фасадов: от самого креативного варианта - изящного деревянного фасада с термодоской (планкен, имитация бруса, американка), до простого и локаничного фасада из фиброцементных плит белого цвета под текстурную штукатурку или под текстуру бетона в сочетании в термодеревом. Также применяем технологию вентилируемого фасада из керамогранита.
+                .swiper-container.swiper10
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="assets/images/location-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/location-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/location-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/location-slider-img1.png" alt="slider-image")
+                        .swiper-slide
+                            img(src="assets/images/location-slider-img1.png" alt="slider-image")
+                    .swiper-button-prev.swiper10-button-prev
+                        svg(width="50" height="50")
+                            use(xlink:href="./assets/images/sprite.svg#facade-slider-arrow-left")
+                    .swiper-button-next.swiper10-button-next
+                        svg(width="50" height="50")
+                            use(xlink:href="./assets/images/sprite.svg#facade-slider-arrow-right")  
+            section.series-articles.center 
+                .series-articles__content
+                    article 
+                        h2.article__heading Инженерные решения 
+                        p.section__text Mauris id in ut dignissim arcu proin nam ac diam. Nisi tincidunt porttitor viverra in lorem netus. Vitae ipsum pretium facilisi enim, volutpat eget sem. Felis at elit platea mauris, integer orci, natoque vitae dapibus. Lectus tristique facilisis felis iaculis habitant turpis eget. Orci accumsan nisl, consequat, posuere. Venenatis eget ut massa ac. Ac massa dignissim quam tincidunt diam. Lobortis velit arcu rutrum morbi enim cras non, ornare vestibulum. Nunc id fermentum erat dolor tellus. Consectetur nec nullam augue massa. Quisque sit tellus tempus velit in. Nisl tincidunt turpis ut donec volutpat est elit egestas molestie. Nibh tortor at venenatis elementum nulla aenean pellentesque. Nisl tincidunt proin lobortis integer bibendum malesuada lectus hac.
+                .series-articles__content
+                    article 
+                        h2.article__heading Спецификации 
+                        p.section__text Mauris id in ut dignissim arcu proin nam ac diam. Nisi tincidunt porttitor viverra in lorem netus. Vitae ipsum pretium facilisi enim, volutpat eget sem. Felis at elit platea mauris, integer orci, natoque vitae dapibus. Lectus tristique facilisis felis iaculis habitant turpis eget. Orci accumsan nisl, consequat, posuere. Venenatis eget ut massa ac. Ac massa dignissim quam tincidunt diam. Lobortis velit arcu rutrum morbi enim cras non, ornare vestibulum. Nunc id fermentum erat dolor tellus. Consectetur nec nullam augue massa. Quisque sit tellus tempus velit in. Nisl tincidunt turpis ut donec volutpat est elit egestas molestie. Nibh tortor at venenatis elementum nulla aenean pellentesque. Nisl tincidunt proin lobortis integer bibendum malesuada lectus hac.
+            section.carried.center.series-carried 
+                .carried__content
+                    h2.carried__title.section__title Выполненные проекты серии Зиг Заг
+                    .carried__projects 
+                        .carried__projects-item
+                            .swiper-container.swiper7
+                                .swiper-wrapper
+                                    <!-- Slides -->
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img1.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img1.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img1.jpg" alt="slider-image")
+                                <!-- If we need pagination -->
+                                .swiper-pagination.swiper7-pagination
+                                <!-- If we need navigation buttons -->
+                                .swiper-button-prev.swiper7-button-prev
+                                    svg(width="50" height="50")
+                                        use(xlink:href="./assets/images/sprite.svg#swiper1-arrow-left")
+                                .swiper-button-next.swiper7-button-next
+                                    svg(width="50" height="50")
+                                        use(xlink:href="./assets/images/sprite.svg#swiper1-arrow-right")  
+                            .carried__projects-desc
+                                h3 Выполненный проект 1
+                                h4 Основные характеристики
+                                .charact-box
+                                    .charact-box__items 
+                                        .charact-item
+                                            p Площадь
+                                            p 80 кв.м 
+                                        .charact-item
+                                            p Количество комнат
+                                            p 2
+                                    .charact-box__items         
+                                        .charact-item
+                                            p Внутреняя отделка
+                                            p Есть 
+                                        .charact-item
+                                            p Внешняя отделка
+                                            p Светлая
+                        .item-clear                   
+                        .carried__projects-item
+                            .swiper-container.swiper8
+                                .swiper-wrapper
+                                    <!-- Slides -->
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                    .swiper-slide
+                                        img(src="assets/images/carried-img2.jpg" alt="slider-image")
+                                <!-- If we need pagination -->
+                                .swiper-pagination.swiper8-pagination
+                                <!-- If we need navigation buttons -->
+                                .swiper-button-prev.swiper8-button-prev
+                                    svg(width="50" height="50")
+                                        use(xlink:href="./assets/images/sprite.svg#swiper1-arrow-left")
+                                .swiper-button-next.swiper8-button-next
+                                    svg(width="50" height="50")
+                                        use(xlink:href="./assets/images/sprite.svg#swiper1-arrow-right")
+                            .carried__projects-desc
+                                h3 Выполненный проект 1
+                                h4 Основные характеристики
+                                .charact-box
+                                    .charact-box__items 
+                                        .charact-item
+                                            p Площадь
+                                            p 80 кв.м 
+                                        .charact-item
+                                            p Количество комнат
+                                            p 2
+                                    .charact-box__items         
+                                        .charact-item
+                                            p Внутреняя отделка
+                                            p Есть 
+                                        .charact-item
+                                            p Внешняя отделка
+                                            p Светлая
+
+            section.cost.center.series-cost
+                .cost__content
+                    h3.cost__title Узнать стоимость дома по своему проекту
+                    form.cost__form(action="#")
+                        .cost__input-box
+                            <input type="name" class="cost__input" placeholder="Ваше имя">
+                            p.clear
+                            <input type="tel" class="cost__input" placeholder="Ваше имя">
+                        .cost__message-box
+                            input(type='text' placeholder="Сообщение").message         
+                        .attachment
+                            svg(width="20" height="18")
+                                use(xlink:href="./assets/images/sprite.svg#clip")
+                            p Прикрепить файл
+                        .agreement
+                            p.agreement-text Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с Пользовательским соглашением
+                            a.cost__form-button.popup-link(href="#popup_3") Отправить
+            section.appeal.center
+                .appeal__block
+                    img.appeal__img(src="assets/images/appeal-img.png")
+                .appeal__block.appeal__block-right
+                    h3.appeal__heading.section__title Хотели бы узнать больше?
+                    a.appeal__link.popup-link(href="#popup") Обратиться к нам 
+
+                        
+                                 
+                           

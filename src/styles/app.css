@@ -1,0 +1,18 @@
+/* Error: Expected identifier.
+ *     ,
+ * 977 |   opacity: 1
+ *     |           ^
+ *     '
+ *   pages\index.sass 977:11  @import
+ *   app.sass 5:9             root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected identifier.\a     \2577 \a 977 \2502    opacity: 1\d\a     \2502            ^\a     \2575 \a   pages\\index.sass 977:11  @import\a   app.sass 5:9             root stylesheet";
+}

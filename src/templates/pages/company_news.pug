@@ -1,0 +1,103 @@
+extends ../template copy
+
+block variables
+    - var title = 'Новости компании'
+    - var contactForm = true
+
+block content
+    main
+        .wrapper 
+            nav.breadcrump.center
+                ul.breadcrump__menu
+                    li 
+                        a.breadcrump__menu-link(href="index.html") Главная 
+                    li  
+                        a.breadcrump__menu-link(href="blog.html") Блог
+                    li  
+                        a.breadcrump__menu-link.breadcrump__menu-link-active(href="company_news.html") Новость компании
+            section.company-news.case-carried.center
+                article.centered-article
+                    h2.company-news__title.case-carried__title.section__title Новость компании
+                    img(src="assets/images/news-img.png", alt="article-image")
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                article.centered-article
+                    h3 Заголовок
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            section.product-slider        
+                .swiper-container.swiper9
+                    .swiper-wrapper.swiper-wrapper-product
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title.pic-title-active Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото    
+                        .swiper-slide
+                            img(src="assets/images/case-carried-slider-img1.png" alt="slider-image")
+                            p.pic-title Подпись под фото
+                    .swiper-button-prev.swiper9-button-prev
+                        svg(width="100" height="100")
+                            use(xlink:href="./assets/images/sprite.svg#slider-link-left")
+                    .swiper-button-next.swiper9-button-next
+                        svg(width="100" height="100")
+                            use(xlink:href="./assets/images/sprite.svg#slider-link")
+                    .swiper-pagination.swiper-pagination-product
+                    .swiper2-fraction-box
+                        .swiper2-fraction
+                            .swiper2-current 1
+                            .swiper2-total 1 
+            section.case-carried.center        
+                article.centered-article
+                    //- h3 Заголовок
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p.case-carried__description.section__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            section.other-news.center 
+                h2.other-news__title Другие новости для вас
+                .other-news__content.blog__content
+                    a(href="company_news.html").blog__img-box
+                        img.blog-img(src="assets/images/blog-img1.png", alt="blog-image")
+                        h3.blog__img-box-title Новость компании
+                        p.blog__img-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    a(href="company_news.html").blog__img-box
+                        img.blog-img(src="assets/images/blog-img1.png", alt="blog-image")
+                        h3.blog__img-box-title Новость компании
+                        p.blog__img-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    a(href="company_news.html").blog__img-box
+                        img.blog-img(src="assets/images/blog-img1.png", alt="blog-image")
+                        h3.blog__img-box-title Новость компании
+                        p.blog__img-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    a(href="company_news.html").blog__img-box
+                        img.blog-img(src="assets/images/blog-img1.png", alt="blog-image")
+                        h3.blog__img-box-title Новость компании
+                        p.blog__img-box-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+                        
+                                 
+                           
