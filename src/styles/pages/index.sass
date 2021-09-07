@@ -744,6 +744,10 @@ body._lock
   padding-top: 180px
   &__text-block
     width: 100%
+  &__box
+    flex: 0 0 50%
+  &__text-block
+    padding: 50px
   .swiper5
     height: 500px
 
@@ -1106,6 +1110,7 @@ body._lock
   &__link
     display: block
     margin-left: 33.3333%
+    margin-top: -180px
   &__link:hover
     cursor: url(../images/svg/series_link_img.svg), pointer
   &__link-mobile
@@ -1127,7 +1132,7 @@ body._lock
     margin-top: 88px
     letter-spacing: 0.5px
   &__desc
-    padding: 49px 0 0 0
+    padding: 20px 0 0 0
     h3
       font-weight: bold
       font-size: 20px
@@ -1579,7 +1584,7 @@ body._lock
 
   &__box-horizontal
     display: flex
-    flex-wrap: wrap
+    flex-wrap: nowrap
 
   &__box-item
     width: 400px
@@ -1819,7 +1824,7 @@ body._lock
 @media screen and (max-width: 1920px)
   .swiper1
     height: 100vh
-    
+
 @media screen and (max-width: 1820px)
   .swiper1
     .swiper1-pagination
@@ -1926,8 +1931,8 @@ body._lock
   .contacts
     &__content
       flex-wrap: nowrap
-    &__box-horizontal
-      flex-wrap: nowrap
+    .horizontal-box-wrap
+      flex-wrap: wrap
     // &__block-left
     //   padding-right:
 
@@ -1960,7 +1965,7 @@ body._lock
   .header-home-page
     padding: 0 calc(50% - 46%)
   .header-home-page__menu
-    width: 69%
+    width: 71%
   .swiper1
     .swiper1-pagination
       bottom: calc(4% - 0px)!important
@@ -2078,9 +2083,9 @@ body._lock
 
   .center,
   .header-home-page
-    padding: 0 3%
+    padding: 0 5%
   .header-home-page__menu
-    width: 73%
+    width: 67%
   .header
     &__logo-box
       margin-right: 20px
@@ -2173,7 +2178,7 @@ body._lock
     &__text
       padding-top: 25px
   .manufacture
-    .swiper5
+    .swiper5, .swiper5-text
       height: 365px
   .our-production
     &__item-box
@@ -2289,8 +2294,8 @@ body._lock
   .individual-design
     &__heading
       font-size: 32px
-    &__text-block
-      transform: translate(15%, 0)
+    // &__text-block
+    //   transform: translate(15%, 0)
 
 @media screen and (max-width: 1200px)
 
@@ -2298,6 +2303,25 @@ body._lock
     .swiper2
       .swiper-wrapper-custom
         min-height: 575px
+
+  .individual-design
+    .swiper3,
+    .swiper3-text
+      height: 305px
+    &__heading
+      font-size: 24px
+    &__text-block
+      padding: 0 0 0 10px  
+    &__text
+      padding-top: 10px
+    .swiper3-text
+      .swiper-slide
+        padding: 0 10px
+  .slider-vert-box
+    .swiper-vertical
+      .swiper-pagination-left
+        width: 90px
+        align-self: flex-start           
 
 @media screen and (max-width: 1140px)
 
@@ -2509,6 +2533,7 @@ body._lock
         height: 300px
       .swiper-pagination-left
         width: 90px
+        align-self: flex-start
         .swiper-pagination-bullet
           height: 10px
     &__text-block
@@ -2517,9 +2542,12 @@ body._lock
       font-size: 22px
       padding-bottom: 20px
     &__text
-      padding: 5px 0 10px 0
+      padding: 5px 0 10px 0  
     .swiper6-text
       height: 310px
+  .manufacture .swiper5,
+  .manufacture .swiper5-text
+    height: 290px      
 
   .swiper9
     .swiper9-button-next,
@@ -2540,8 +2568,8 @@ body._lock
       .text-block
         font-size: 26px
         max-width: 800px
-    .swiper3-text
-      max-height: 300px
+    // .swiper3-text
+    //   max-height: 300px
 
   .section
     &__title
@@ -2866,6 +2894,7 @@ body._lock
         flex-wrap: nowrap
         overflow-x: auto
         min-height: 150px
+        margin-bottom: 20px
         .item
           min-width: 260px
         .item:nth-child(2)
@@ -2875,7 +2904,7 @@ body._lock
       .about-rhizome-link.mobile
         display: flex
     &__right
-      max-width: 700px
+      max-width: 700px 
 
   .product-slider
     max-width: 810px
@@ -2984,17 +3013,22 @@ body._lock
       margin: 0 0 12px 0
 
   .manufacture
+    flex-direction: column
     &__box
-      flex-direction: column
       margin-top: 50px
     &__text-block
       width: 100%
       padding: 0
-    .swiper5
+    .swiper5, .swiper5-text
+      height: 415px
       width: 100%
       max-width: 700px
       .swiper-pagination
         display: none
+    .swiper5-text
+      height: 300px
+      .swiper-slide
+        padding: 110px   
 
   .faq
     margin-top: 70px
@@ -3675,7 +3709,7 @@ body._lock
         padding: 0 20px 0 0
     &__box-item-heading,
     &__box-item-heading-custom
-      font-size: 26px
+      font-size: 25px
       line-height: 32px
     &__box-item-text
       font-size: 12px
