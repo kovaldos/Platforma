@@ -1,2 +1,2 @@
 # Platforma
-Frontend of platforma web site
+Frontend for web site
