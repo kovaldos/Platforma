@@ -1,2 +1,1 @@
-# Platforma
-Frontend for web site
+https://kovaldos.github.io/Platforma/build/index.html
